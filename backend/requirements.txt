@@ -5,3 +5,7 @@ python-multipart>=0.0.20
 passlib[bcrypt]>=1.7.4
 python-jose[cryptography]>=3.3.0
 aiosqlite>=0.20.0
+ortools>=9.10.0
+scikit-learn>=1.4.0
+numpy>=1.26.0
+sqlalchemy>=2.0.0

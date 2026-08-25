@@ -1,3 +1,4 @@
+from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from database import init_db
@@ -8,26 +9,30 @@ from routers.blocks import router as blocks_router
 from routers.plans import router as plans_router
 from routers.analytics import router as analytics_router
 
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # Initialize SQLite tables & seed data on application startup
+    init_db()
+    yield
+
+
 app = FastAPI(
     title="RailOpt AI API",
     description="AI-Powered Automatic Block Planning for Indian Railways",
     version="1.0.0",
+    lifespan=lifespan,
 )
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:3000", "http://127.0.0.1:5173"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# Initialize DB on startup
-@app.on_event("startup")
-def startup():
-    init_db()
-
-# Include all routers
+# Include API routers
 app.include_router(auth_router)
 app.include_router(assets_router)
 app.include_router(maintenance_router)

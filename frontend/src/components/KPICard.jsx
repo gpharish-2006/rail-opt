@@ -4,96 +4,83 @@ export default function KPICard({
   subtitle,
   icon: Icon,
   color = 'blue',
-  trend
+  trend,
+  badgeText
 }) {
-  const colors = {
+  const colorMap = {
     blue: {
-      bg: 'bg-blue-50',
-      border: 'border-blue-100',
-      icon: 'text-blue-600',
-      val: 'text-blue-700'
+      iconBg: 'bg-blue-100 dark:bg-blue-900/40',
+      iconColor: 'text-blue-600 dark:text-blue-400',
+      valColor: 'text-blue-700 dark:text-blue-300',
+      borderAccent: 'border-l-4 border-l-blue-600',
     },
-
     green: {
-      bg: 'bg-emerald-50',
-      border: 'border-emerald-100',
-      icon: 'text-emerald-600',
-      val: 'text-emerald-700'
+      iconBg: 'bg-emerald-100 dark:bg-emerald-900/40',
+      iconColor: 'text-emerald-600 dark:text-emerald-400',
+      valColor: 'text-emerald-700 dark:text-emerald-300',
+      borderAccent: 'border-l-4 border-l-emerald-600',
     },
-
     amber: {
-      bg: 'bg-amber-50',
-      border: 'border-amber-100',
-      icon: 'text-amber-600',
-      val: 'text-amber-700'
+      iconBg: 'bg-amber-100 dark:bg-amber-900/40',
+      iconColor: 'text-amber-600 dark:text-amber-400',
+      valColor: 'text-amber-700 dark:text-amber-300',
+      borderAccent: 'border-l-4 border-l-amber-500',
     },
-
     red: {
-      bg: 'bg-red-50',
-      border: 'border-red-100',
-      icon: 'text-red-600',
-      val: 'text-red-700'
+      iconBg: 'bg-red-100 dark:bg-red-900/40',
+      iconColor: 'text-red-600 dark:text-red-400',
+      valColor: 'text-red-700 dark:text-red-300',
+      borderAccent: 'border-l-4 border-l-red-600',
     },
-
     purple: {
-      bg: 'bg-purple-50',
-      border: 'border-purple-100',
-      icon: 'text-purple-600',
-      val: 'text-purple-700'
-    }
+      iconBg: 'bg-purple-100 dark:bg-purple-900/40',
+      iconColor: 'text-purple-600 dark:text-purple-400',
+      valColor: 'text-purple-700 dark:text-purple-300',
+      borderAccent: 'border-l-4 border-l-purple-600',
+    },
   }
 
-  const c = colors[color] || colors.blue
+  const c = colorMap[color] || colorMap.blue
 
   return (
     <div
-      className="
-        bg-white
-        rounded-2xl
-        p-5
-        border
-        border-slate-200
-        shadow-sm
-        hover:shadow-md
-        hover:-translate-y-0.5
-        transition-all
-        duration-200
-      "
+      className={`
+        bg-white dark:bg-slate-800
+        border border-slate-200 dark:border-slate-700
+        ${c.borderAccent}
+        rounded-xl
+        p-4
+        shadow-xs hover:shadow-sm
+        transition-all duration-200
+        flex flex-col justify-between
+      `}
     >
-      {/* Top row */}
-      <div className="flex items-start justify-between mb-3">
-
-        {/* Icon */}
-        <div
-          className={`
-            w-10
-            h-10
-            rounded-xl
-            ${c.bg}
-            flex
-            items-center
-            justify-center
-          `}
-        >
-          <Icon
-            size={20}
-            className={c.icon}
-          />
+      <div className="flex items-start justify-between gap-2 mb-2">
+        <div className="flex items-center gap-2.5">
+          {Icon && (
+            <div className={`w-8 h-8 rounded-lg ${c.iconBg} flex items-center justify-center flex-shrink-0`}>
+              <Icon size={18} className={c.iconColor} />
+            </div>
+          )}
+          <span className="text-slate-700 dark:text-slate-300 font-bold text-xs uppercase tracking-wide">
+            {title}
+          </span>
         </div>
 
-        {/* Trend */}
-        {trend !== undefined && (
+        {badgeText && (
+          <span className="text-[10px] font-extrabold px-2 py-0.5 rounded bg-slate-100 dark:bg-slate-700 text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-600">
+            {badgeText}
+          </span>
+        )}
+
+        {trend !== undefined && !badgeText && (
           <span
             className={`
-              text-xs
-              font-medium
-              px-2
-              py-1
-              rounded-full
+              text-[11px] font-bold px-2 py-0.5 rounded-full border
               ${
                 trend >= 0
-                  ? 'bg-emerald-50 text-emerald-600'
-                  : 'bg-red-50 text-red-600'
+                  ? 'bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border-emerald-200 dark:border-emerald-800'
+                  : 'bg-red-50 dark:bg-red-950/40 text-red-700 dark:text-red-300 border-red-200 dark:border-red-800'
               }
             `}
           >
@@ -102,29 +89,17 @@ export default function KPICard({
         )}
       </div>
 
-      {/* Value */}
-      <div
-        className={`
-          text-2xl
-          font-bold
-          mb-1
-          ${c.val}
-        `}
-      >
-        {value ?? '—'}
-      </div>
-
-      {/* Title */}
-      <div className="text-slate-800 text-sm font-semibold">
-        {title}
-      </div>
-
-      {/* Subtitle */}
-      {subtitle && (
-        <div className="text-slate-500 text-xs mt-0.5">
-          {subtitle}
+      <div className="mt-1">
+        <div className={`text-2xl font-black font-mono leading-none tracking-tight ${c.valColor}`}>
+          {value ?? '—'}
         </div>
-      )}
+
+        {subtitle && (
+          <div className="text-slate-500 dark:text-slate-400 text-[11px] font-medium mt-1 truncate">
+            {subtitle}
+          </div>
+        )}
+      </div>
     </div>
   )
 }

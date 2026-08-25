@@ -1,0 +1,388 @@
+{
+  "communities": {
+    "0": [
+      "frontend_src_api_client",
+      "frontend_src_api_client_api",
+      "frontend_src_api_client_approveblock",
+      "frontend_src_api_client_createmaintenance",
+      "frontend_src_api_client_getassets",
+      "frontend_src_api_client_getblocks",
+      "frontend_src_api_client_getcorridors",
+      "frontend_src_api_client_getmaintenance",
+      "frontend_src_api_client_gettrains",
+      "frontend_src_api_client_getweeklyplan",
+      "frontend_src_api_client_optimizeblock",
+      "frontend_src_api_client_saveblock",
+      "frontend_src_components_kpicard",
+      "frontend_src_components_kpicard_kpicard",
+      "frontend_src_components_statusbadge",
+      "frontend_src_components_statusbadge_configs",
+      "frontend_src_components_statusbadge_dots",
+      "frontend_src_components_statusbadge_statusbadge",
+      "frontend_src_pages_blockplannerpage",
+      "frontend_src_pages_blockplannerpage_blockplannerpage",
+      "frontend_src_pages_blockplannerpage_blockplannerpage_applyoverride",
+      "frontend_src_pages_blockplannerpage_blockplannerpage_handleoptimize",
+      "frontend_src_pages_blockplannerpage_blockplannerpage_handlesave",
+      "frontend_src_pages_blockplannerpage_blockplannerpage_openoverridemodal",
+      "frontend_src_pages_blockplannerpage_blockplannerpage_toggletask",
+      "frontend_src_pages_blockplannerpage_dept_badge_style",
+      "frontend_src_pages_blockplannerpage_dept_bar_color",
+      "frontend_src_pages_dashboardpage",
+      "frontend_src_pages_dashboardpage_dashboardpage",
+      "frontend_src_pages_dashboardpage_dept_colors",
+      "frontend_src_pages_dashboardpage_loadingskeleton",
+      "frontend_src_pages_maintenancepage",
+      "frontend_src_pages_maintenancepage_depts",
+      "frontend_src_pages_maintenancepage_maintenancepage",
+      "frontend_src_pages_maintenancepage_maintenancepage_handlemergetasks",
+      "frontend_src_pages_maintenancepage_maintenancepage_handlesave",
+      "frontend_src_pages_maintenancepage_maintenancepage_load",
+      "frontend_src_pages_maintenancepage_maintenancepage_toggleselectall",
+      "frontend_src_pages_maintenancepage_maintenancepage_toggleselecttask",
+      "frontend_src_pages_maintenancepage_maintenancepage_togglesort",
+      "frontend_src_pages_weeklyplanpage",
+      "frontend_src_pages_weeklyplanpage_day_short",
+      "frontend_src_pages_weeklyplanpage_days",
+      "frontend_src_pages_weeklyplanpage_fmt",
+      "frontend_src_pages_weeklyplanpage_getmonday",
+      "frontend_src_pages_weeklyplanpage_weeklyplanpage",
+      "frontend_src_pages_weeklyplanpage_weeklyplanpage_changeweek"
+    ],
+    "1": [
+      "backend_database",
+      "backend_database_get_db",
+      "backend_database_init_db",
+      "backend_database_seed",
+      "backend_main",
+      "backend_main_health",
+      "backend_main_lifespan",
+      "backend_main_py_get",
+      "backend_main_root",
+      "backend_models_maintenancetaskcreate",
+      "backend_routers_analytics",
+      "backend_routers_analytics_get_analytics",
+      "backend_routers_analytics_py_get",
+      "backend_routers_assets",
+      "backend_routers_assets_get_assets",
+      "backend_routers_assets_get_corridors",
+      "backend_routers_assets_get_trains",
+      "backend_routers_assets_py_get",
+      "backend_routers_blocks_get_blocks",
+      "backend_routers_blocks_py_get",
+      "backend_routers_maintenance",
+      "backend_routers_maintenance_compute_priority",
+      "backend_routers_maintenance_create_maintenance",
+      "backend_routers_maintenance_get_maintenance",
+      "backend_routers_maintenance_get_unified_defects",
+      "backend_routers_maintenance_py_get",
+      "backend_routers_maintenance_py_post",
+      "backend_routers_maintenance_rationale_18",
+      "backend_routers_plans",
+      "backend_routers_plans_get_weekly_plan",
+      "backend_routers_plans_py_get",
+      "fastapi"
+    ],
+    "2": [
+      "frontend_src_api_client_getanalytics",
+      "frontend_src_api_client_login",
+      "frontend_src_api_client_signup",
+      "frontend_src_app",
+      "frontend_src_app_app",
+      "frontend_src_components_layout",
+      "frontend_src_components_layout_layout",
+      "frontend_src_components_sidebar",
+      "frontend_src_components_sidebar_navitems",
+      "frontend_src_components_sidebar_sidebar",
+      "frontend_src_components_sidebar_sidebar_handlelogout",
+      "frontend_src_components_topnav",
+      "frontend_src_components_topnav_pagetitles",
+      "frontend_src_components_topnav_topnav",
+      "frontend_src_context_themecontext",
+      "frontend_src_context_themecontext_themecontext",
+      "frontend_src_context_themecontext_themeprovider",
+      "frontend_src_context_themecontext_usetheme",
+      "frontend_src_main",
+      "frontend_src_pages_analyticspage",
+      "frontend_src_pages_analyticspage_analyticspage",
+      "frontend_src_pages_analyticspage_dept_colors",
+      "frontend_src_pages_analyticspage_pie_colors",
+      "frontend_src_pages_beforeafterpage",
+      "frontend_src_pages_beforeafterpage_beforeafterpage",
+      "frontend_src_pages_loginpage",
+      "frontend_src_pages_loginpage_loginpage",
+      "frontend_src_pages_loginpage_loginpage_handlesubmit",
+      "frontend_src_store_authstore",
+      "frontend_src_store_authstore_useauthstore",
+      "ref_react"
+    ],
+    "3": [
+      "backend_database_hash_password",
+      "backend_models",
+      "backend_models_authresponse",
+      "backend_models_blockrecommendation",
+      "backend_models_loginrequest",
+      "backend_models_optimizerequest",
+      "backend_models_optimizerplanrequest",
+      "backend_models_optimizerplanresponse",
+      "backend_models_reschedulerequest",
+      "backend_models_signuprequest",
+      "backend_models_trainschedule",
+      "backend_models_unifieddefect",
+      "backend_models_userout",
+      "backend_routers_auth",
+      "backend_routers_auth_login",
+      "backend_routers_auth_py_post",
+      "backend_routers_auth_signup",
+      "backend_routers_blocks",
+      "backend_routers_blocks_approve_block",
+      "backend_routers_blocks_generate_plan",
+      "backend_routers_blocks_optimize",
+      "backend_routers_blocks_py_post",
+      "backend_routers_blocks_rationale_130",
+      "backend_routers_blocks_rationale_63",
+      "backend_routers_blocks_rationale_91",
+      "backend_routers_blocks_reschedule",
+      "backend_routers_blocks_save_block",
+      "basemodel"
+    ],
+    "4": [
+      "axios",
+      "frontend_package",
+      "frontend_package_dependencies",
+      "frontend_package_dependencies_axios",
+      "frontend_package_dependencies_lucide_react",
+      "frontend_package_dependencies_react",
+      "frontend_package_dependencies_react_dom",
+      "frontend_package_dependencies_react_router_dom",
+      "frontend_package_dependencies_recharts",
+      "frontend_package_dependencies_zustand",
+      "frontend_package_name",
+      "frontend_package_private",
+      "frontend_package_scripts",
+      "frontend_package_scripts_build",
+      "frontend_package_scripts_dev",
+      "frontend_package_scripts_lint",
+      "frontend_package_scripts_preview",
+      "frontend_package_type",
+      "frontend_package_version",
+      "lucide_react",
+      "react",
+      "react_dom",
+      "react_router_dom",
+      "recharts",
+      "zustand"
+    ],
+    "5": [
+      "any",
+      "backend_optimizer",
+      "backend_optimizer_build_recommendation_response",
+      "backend_optimizer_calculate_ai_risk_score",
+      "backend_optimizer_optimize_blocks",
+      "backend_optimizer_rationale_1",
+      "backend_optimizer_rationale_237",
+      "backend_optimizer_rationale_26",
+      "backend_optimizer_rationale_275",
+      "backend_optimizer_rationale_316",
+      "backend_optimizer_rationale_68",
+      "backend_optimizer_score_task_legacy",
+      "backend_optimizer_solve_block_schedule",
+      "backend_optimizer_solve_reschedule",
+      "backend_optimizer_string_pad",
+      "backend_test_backend_engine",
+      "backend_test_backend_engine_test_backend"
+    ],
+    "6": [
+      "frontend_package_devdependencies",
+      "frontend_package_devdependencies_oxlint",
+      "frontend_package_devdependencies_tailwindcss",
+      "frontend_package_devdependencies_tailwindcss_vite",
+      "frontend_package_devdependencies_types_react",
+      "frontend_package_devdependencies_types_react_dom",
+      "frontend_package_devdependencies_vite",
+      "frontend_package_devdependencies_vitejs_plugin_react",
+      "oxlint",
+      "tailwindcss",
+      "tailwindcss_vite",
+      "types_react",
+      "types_react_dom",
+      "vite",
+      "vitejs_plugin_react"
+    ],
+    "7": [
+      "frontend_oxlintrc",
+      "frontend_oxlintrc_plugins",
+      "frontend_oxlintrc_rules",
+      "frontend_oxlintrc_rules_react_only_export_components",
+      "frontend_oxlintrc_rules_react_rules_of_hooks",
+      "frontend_oxlintrc_schema",
+      "ref_oxc",
+      "ref_warn"
+    ],
+    "8": [
+      "backend_test_api_endpoints",
+      "backend_test_api_endpoints_test_routes"
+    ],
+    "9": [
+      "frontend_vite_config"
+    ]
+  },
+  "cohesion": {
+    "0": 0.07215541165587419,
+    "1": 0.125,
+    "2": 0.14193548387096774,
+    "3": 0.15873015873015872,
+    "4": 0.08,
+    "5": 0.2426470588235294,
+    "6": 0.13333333333333333,
+    "7": 0.25,
+    "8": 1.0,
+    "9": 1.0
+  },
+  "gods": [
+    {
+      "id": "backend_database_get_db",
+      "label": "get_db()",
+      "degree": 26
+    },
+    {
+      "id": "backend_optimizer_solve_block_schedule",
+      "label": "solve_block_schedule()",
+      "degree": 13
+    },
+    {
+      "id": "ref_react",
+      "label": "react",
+      "degree": 12
+    },
+    {
+      "id": "frontend_src_context_themecontext_usetheme",
+      "label": "useTheme()",
+      "degree": 11
+    },
+    {
+      "id": "frontend_src_pages_blockplannerpage_blockplannerpage",
+      "label": "BlockPlannerPage()",
+      "degree": 10
+    },
+    {
+      "id": "backend_optimizer_calculate_ai_risk_score",
+      "label": "calculate_ai_risk_score()",
+      "degree": 9
+    },
+    {
+      "id": "backend_optimizer_solve_reschedule",
+      "label": "solve_reschedule()",
+      "degree": 9
+    },
+    {
+      "id": "frontend_src_pages_maintenancepage_maintenancepage",
+      "label": "MaintenancePage()",
+      "degree": 8
+    },
+    {
+      "id": "frontend_src_api_client_getmaintenance",
+      "label": "getMaintenance()",
+      "degree": 7
+    },
+    {
+      "id": "backend_database_init_db",
+      "label": "init_db()",
+      "degree": 7
+    }
+  ],
+  "surprises": [
+    {
+      "source": "create_maintenance()",
+      "target": "MaintenanceTaskCreate",
+      "source_files": [
+        "backend/routers/maintenance.py",
+        "backend/models.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source"
+    },
+    {
+      "source": "login()",
+      "target": "AuthResponse",
+      "source_files": [
+        "backend/routers/auth.py",
+        "backend/models.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source"
+    },
+    {
+      "source": "signup()",
+      "target": "AuthResponse",
+      "source_files": [
+        "backend/routers/auth.py",
+        "backend/models.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source"
+    },
+    {
+      "source": "login()",
+      "target": "LoginRequest",
+      "source_files": [
+        "backend/routers/auth.py",
+        "backend/models.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source"
+    },
+    {
+      "source": "optimize()",
+      "target": "OptimizeRequest",
+      "source_files": [
+        "backend/routers/blocks.py",
+        "backend/models.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source"
+    }
+  ],
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `get_db()` connect `get_db` to `blocks.py`, `solve_block_schedule`?",
+      "why": "High betweenness centrality (0.051) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `react` connect `App.jsx` to `client.js`, `.oxlintrc.json`?",
+      "why": "High betweenness centrality (0.043) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `plugins` connect `.oxlintrc.json` to `App.jsx`?",
+      "why": "High betweenness centrality (0.026) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `api`, `configs`, `dots` to the rest of the system?",
+      "why": "40 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `client.js` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.07215541165587419 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `get_db` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.125 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `App.jsx` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.14193548387096774 - nodes in this community are weakly interconnected."
+    }
+  ]
+}
