@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field
+from pydantic import AliasChoices, BaseModel, Field
 from typing import Optional, List, Dict, Any
 from datetime import datetime
 
@@ -176,8 +176,16 @@ class OptimizerPlanRequest(BaseModel):
 
 class RescheduleRequest(BaseModel):
     train_id: int
-    delay_mins: float
+    delay_minutes: float = Field(
+        validation_alias=AliasChoices("delay_minutes", "delay_mins"),
+        gt=0,
+    )
+    section_id: Optional[str] = None
     corridor_id: Optional[int] = None
+
+    @property
+    def delay_mins(self) -> float:
+        return self.delay_minutes
 
 
 class BlockRecommendation(BaseModel):

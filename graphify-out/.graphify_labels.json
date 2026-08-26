@@ -1,1 +1,15 @@
-{"0": "client.js", "1": "test_upgrade.py", "2": "seed_data.py", "3": "package.json", "4": "optimizer.py", "5": "get_db", "6": "dependencies", "7": "devDependencies", "9": "LoginPage.jsx", "10": ".oxlintrc.json", "11": "test_api_endpoints.py", "12": "Any", "13": "vite.config.js"}
+{
+  "0": "DashboardPage.jsx",
+  "1": "test_upgrade.py",
+  "2": "RailOpt — Automatic Railway Block Planning System",
+  "3": "package.json",
+  "4": "optimizer.py",
+  "5": "get_db",
+  "6": "dependencies",
+  "7": "devDependencies",
+  "8": "React + Vite",
+  "9": "App.jsx",
+  "10": ".oxlintrc.json",
+  "11": "test_api_endpoints.py",
+  "13": "vite.config.js"
+}

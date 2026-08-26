@@ -1,12 +1,10 @@
 import Sidebar from './Sidebar'
 import TopNav from './TopNav'
 import { Outlet } from 'react-router-dom'
-import { ThemeProvider } from '../context/ThemeContext'
 
 export default function Layout() {
   return (
-    <ThemeProvider>
-      <div className="flex min-h-screen bg-[var(--bg-main)] text-[var(--text-primary)] transition-colors">
+    <div className="flex min-h-screen bg-[var(--bg-main)] text-[var(--text-primary)] transition-colors">
         <Sidebar />
         <div className="flex-1 flex flex-col min-w-0">
           <TopNav />
@@ -14,7 +12,6 @@ export default function Layout() {
             <Outlet />
           </main>
         </div>
-      </div>
-    </ThemeProvider>
+    </div>
   )
 }

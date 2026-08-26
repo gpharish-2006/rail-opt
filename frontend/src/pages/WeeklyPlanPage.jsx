@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { getWeeklyPlan } from '../api/client'
 import StatusBadge from '../components/StatusBadge'
+import { DEPT_COLORS } from '../constants/colors'
 import { CalendarDays, ChevronLeft, ChevronRight, Clock, Train, Layers } from 'lucide-react'
 
 const DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
@@ -136,6 +137,13 @@ export default function WeeklyPlanPage() {
                       <Layers size={12} /> {plan.block_code}
                     </div>
                     <div className="font-bold text-slate-900 dark:text-white">{plan.corridor_code}</div>
+                    <div className="flex flex-wrap gap-1">
+                      {String(plan.departments || '').split(',').filter(Boolean).map(department => (
+                        <span key={department} className="text-[10px] font-bold" style={{ color: DEPT_COLORS[department.trim()] }}>
+                          {department.trim()}
+                        </span>
+                      ))}
+                    </div>
                     <div className="text-[11px] text-slate-600 dark:text-slate-300 flex items-center gap-1 font-mono">
                       <Clock size={11} /> {plan.start_time?.slice(11, 16)} – {plan.end_time?.slice(11, 16)}
                     </div>

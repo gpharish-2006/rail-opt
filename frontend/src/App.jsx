@@ -8,12 +8,14 @@ import BlockPlannerPage from './pages/BlockPlannerPage'
 import WeeklyPlanPage from './pages/WeeklyPlanPage'
 import BeforeAfterPage from './pages/BeforeAfterPage'
 import AnalyticsPage from './pages/AnalyticsPage'
+import { ThemeProvider } from './context/ThemeContext'
 
 import './App.css'
 
 export default function App() {
   return (
-    <Routes>
+    <ThemeProvider>
+      <Routes>
       {/* LOGIN ROUTE */}
       <Route path="/login" element={<LoginPage />} />
 
@@ -53,6 +55,7 @@ export default function App() {
         {/* DEFAULT FALLBACK */}
         <Route path="*" element={<Navigate to="/dashboard" replace />} />
       </Route>
-    </Routes>
+      </Routes>
+    </ThemeProvider>
   )
 }

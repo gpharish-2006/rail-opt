@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, Header, HTTPException
 from database import get_db, hash_password
 from models import LoginRequest, SignupRequest, AuthResponse, UserOut
 import hashlib
@@ -63,6 +63,35 @@ def signup(req: SignupRequest):
             message="Account created successfully",
             user=user,
             token=f"mock-jwt-{row['id']}-railopt",
+        )
+    finally:
+        db.close()
+
+
+@router.get("/session", response_model=AuthResponse)
+def session(authorization: str = Header(default="")):
+    """Return the user represented by the application's mock bearer token."""
+    prefix = "Bearer mock-jwt-"
+    if not authorization.startswith(prefix):
+        raise HTTPException(status_code=401, detail="Authentication required")
+    try:
+        user_id = int(authorization[len(prefix):].split("-railopt", 1)[0])
+    except (TypeError, ValueError):
+        raise HTTPException(status_code=401, detail="Invalid session token")
+
+    db = get_db()
+    try:
+        row = db.execute("SELECT * FROM users WHERE id=?", (user_id,)).fetchone()
+        if not row:
+            raise HTTPException(status_code=401, detail="Invalid session token")
+        return AuthResponse(
+            success=True,
+            message="Session active",
+            user=UserOut(
+                id=row["id"], name=row["name"], email=row["email"],
+                role=row["role"], department=row["department"],
+            ),
+            token=authorization.removeprefix("Bearer "),
         )
     finally:
         db.close()

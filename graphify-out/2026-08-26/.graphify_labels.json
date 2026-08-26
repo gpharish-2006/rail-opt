@@ -1,1 +1,1 @@
-{"0": "client.js", "1": "get_db", "2": "App.jsx", "3": "blocks.py", "4": "dependencies", "5": "solve_block_schedule", "6": "devDependencies", "7": ".oxlintrc.json", "8": "test_api_endpoints.py", "9": "vite.config.js"}
+{"0": "client.js", "1": "test_upgrade.py", "2": "seed_data.py", "3": "package.json", "4": "optimizer.py", "5": "get_db", "6": "dependencies", "7": "devDependencies", "9": "LoginPage.jsx", "10": ".oxlintrc.json", "11": "test_api_endpoints.py", "12": "Any", "13": "vite.config.js"}

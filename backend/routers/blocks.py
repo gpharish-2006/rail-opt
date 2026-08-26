@@ -1,14 +1,21 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException
 from database import get_db
-from models import OptimizeRequest, OptimizerPlanRequest, RescheduleRequest
+from models import (
+    BlockRecommendation,
+    MegaBlocksResponse,
+    OptimizeRequest,
+    OptimizerPlanRequest,
+    OptimizerPlanResponse,
+    RescheduleRequest,
+)
 from optimizer import optimize_blocks, solve_block_schedule, solve_reschedule
 import datetime
 
 router = APIRouter(prefix="/api", tags=["blocks"])
 
 
-@router.get("/blocks")
-def get_blocks(status: str = None, corridor_id: int = None):
+@router.get("/blocks", response_model=list[dict])
+def get_blocks(status: str = None, corridor_id: int = None) -> list[dict]:
     db = get_db()
     try:
         query = """
@@ -31,8 +38,8 @@ def get_blocks(status: str = None, corridor_id: int = None):
         db.close()
 
 
-@router.post("/block/optimize")
-def optimize(req: OptimizeRequest):
+@router.post("/block/optimize", response_model=BlockRecommendation | dict)
+def optimize(req: OptimizeRequest) -> dict:
     db = get_db()
     try:
         defects_query = "SELECT * FROM unified_defects WHERE 1=1"
@@ -70,8 +77,8 @@ def optimize(req: OptimizeRequest):
         db.close()
 
 
-@router.post("/optimizer/generate-plan")
-def generate_plan(req: OptimizerPlanRequest):
+@router.post("/optimizer/generate-plan", response_model=OptimizerPlanResponse)
+def generate_plan(req: OptimizerPlanRequest) -> dict:
     """
     Triggers Google OR-Tools CP-SAT Solver for a specified horizon and corridor.
 
@@ -120,21 +127,38 @@ def generate_plan(req: OptimizerPlanRequest):
         db.close()
 
 
-@router.post("/optimizer/reschedule")
-def reschedule(req: RescheduleRequest):
+@router.post("/optimizer/reschedule", response_model=dict)
+def reschedule(req: RescheduleRequest) -> dict:
     """
     Event-driven rescheduling when a train is delayed.
 
-    Accepts: train_id (int), delay_mins (float), optional corridor_id.
+    Accepts: train_id (int), delay_minutes (float), and optional section_id.
     Returns: Re-optimised schedule with updated maintenance block windows.
     """
     db = get_db()
     try:
+        delayed_train = db.execute(
+            "SELECT * FROM train_schedules WHERE id=? OR train_no=?",
+            (req.train_id, str(req.train_id)),
+        ).fetchone()
+        if delayed_train is None:
+            raise HTTPException(status_code=404, detail=f"Train {req.train_id} was not found")
+
+        corridor_id = req.corridor_id
+        if req.section_id:
+            section = db.execute(
+                "SELECT id FROM corridors WHERE code=? OR section=? OR from_station=?",
+                (req.section_id, req.section_id, req.section_id.split("_")[1] if req.section_id.startswith("SEC_") else req.section_id),
+            ).fetchone()
+            if section is None:
+                raise HTTPException(status_code=404, detail=f"Section {req.section_id} was not found")
+            corridor_id = section["id"]
+
         defects_query = "SELECT * FROM unified_defects WHERE status != 'Completed'"
         defects_params = []
-        if req.corridor_id:
+        if corridor_id:
             defects_query += " AND corridor_id=?"
-            defects_params.append(req.corridor_id)
+            defects_params.append(corridor_id)
 
         defects = [dict(r) for r in db.execute(defects_query, defects_params).fetchall()]
         if not defects:
@@ -147,19 +171,44 @@ def reschedule(req: RescheduleRequest):
         corridors = [dict(r) for r in db.execute("SELECT * FROM corridors").fetchall()]
 
         res = solve_reschedule(
-            train_id=req.train_id,
+            train_id=delayed_train["id"],
             delay_mins=req.delay_mins,
             defects=defects,
             train_schedules=trains,
             corridors=corridors,
         )
+
+        # Replace only plans on the affected corridor with the solver's conflict-free result.
+        if corridor_id and res.get("success") and res.get("schedule_json") is not None:
+            db.execute("DELETE FROM block_plans WHERE corridor_id=?", (corridor_id,))
+            for index, item in enumerate(res["schedule_json"], start=1):
+                if item.get("corridor_id") != corridor_id:
+                    continue
+                db.execute(
+                    """INSERT INTO block_plans (
+                        block_code, corridor_id, start_time, end_time, duration_hours,
+                        is_mega_block, merged_departments, assigned_tasks,
+                        priority_score, train_conflicts, estimated_delay_min,
+                        calculated_downtime_saved_mins, block_utilization, status, reason
+                    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                    (
+                        f"RS-{req.train_id}-{index}", corridor_id,
+                        item["start_time"], item["end_time"], item["duration_hours"],
+                        int(res.get("mega_blocks_created", 0) > 0),
+                        item.get("department", "Engineering"), str(item.get("task_code", "")),
+                        item.get("priority_score", 0), 0, 0,
+                        res.get("total_hours_saved", 0) * 60, 0, "Proposed",
+                        "Dynamic train-delay reschedule",
+                    ),
+                )
+            db.commit()
         return res
     finally:
         db.close()
 
 
-@router.get("/optimizer/status")
-def optimizer_status():
+@router.get("/optimizer/status", response_model=dict)
+def optimizer_status() -> dict:
     """
     Lightweight status endpoint: returns solver metadata, DB record counts,
     and last optimization summary from block_plans.
@@ -194,8 +243,8 @@ def optimizer_status():
         db.close()
 
 
-@router.post("/blocks/{block_id}/approve")
-def approve_block(block_id: int):
+@router.post("/blocks/{block_id}/approve", response_model=dict)
+def approve_block(block_id: int) -> dict:
     db = get_db()
     try:
         db.execute("UPDATE blocks SET status='Approved' WHERE id=?", (block_id,))
@@ -206,8 +255,8 @@ def approve_block(block_id: int):
         db.close()
 
 
-@router.post("/block/save")
-def save_block(data: dict):
+@router.post("/block/save", response_model=dict)
+def save_block(data: dict) -> dict:
     """Save an AI-generated optimization result as a block record."""
     db = get_db()
     try:

@@ -40,7 +40,7 @@
       "file_type": "code",
       "norm_label": "blockrecommendation",
       "source_file": "backend/models.py",
-      "source_location": "L183"
+      "source_location": "L191"
     },
     {
       "id": "backend_models_defectlog",
@@ -118,7 +118,7 @@
       "file_type": "code",
       "norm_label": "optimizerplanresponse",
       "source_file": "backend/models.py",
-      "source_location": "L201"
+      "source_location": "L209"
     },
     {
       "id": "backend_models_reschedulerequest",
@@ -199,148 +199,160 @@
       "source_location": "L139"
     },
     {
-      "id": "frontend_src_api_client_approveblock",
-      "label": "approveBlock()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "client.js",
-      "file_type": "code",
-      "norm_label": "approveblock()",
-      "source_file": "frontend/src/api/client.js",
-      "source_location": "L36"
-    },
-    {
-      "id": "frontend_src_api_client_createmaintenance",
-      "label": "createMaintenance()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "client.js",
-      "file_type": "code",
-      "norm_label": "createmaintenance()",
-      "source_file": "frontend/src/api/client.js",
-      "source_location": "L25"
-    },
-    {
-      "id": "frontend_src_api_client_getanalytics",
-      "label": "getAnalytics()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "client.js",
-      "file_type": "code",
-      "norm_label": "getanalytics()",
-      "source_file": "frontend/src/api/client.js",
-      "source_location": "L43"
-    },
-    {
-      "id": "frontend_src_api_client_getassets",
-      "label": "getAssets()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "client.js",
-      "file_type": "code",
-      "norm_label": "getassets()",
-      "source_file": "frontend/src/api/client.js",
-      "source_location": "L28"
-    },
-    {
-      "id": "frontend_src_api_client_getblocks",
-      "label": "getBlocks()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "client.js",
-      "file_type": "code",
-      "norm_label": "getblocks()",
-      "source_file": "frontend/src/api/client.js",
-      "source_location": "L33"
-    },
-    {
-      "id": "frontend_src_api_client_getcorridors",
+      "id": "frontend_src_api_analytics_getcorridors",
       "label": "getCorridors()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "getcorridors()",
-      "source_file": "frontend/src/api/client.js",
-      "source_location": "L30"
+      "source_file": "frontend/src/api/analytics.js",
+      "source_location": "L4"
     },
     {
-      "id": "frontend_src_api_client_getmaintenance",
-      "label": "getMaintenance()",
+      "id": "frontend_src_api_auth_getsession",
+      "label": "getSession()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
-      "norm_label": "getmaintenance()",
-      "source_file": "frontend/src/api/client.js",
-      "source_location": "L24"
+      "norm_label": "getsession()",
+      "source_file": "frontend/src/api/auth.js",
+      "source_location": "L6"
     },
     {
-      "id": "frontend_src_api_client_gettrains",
-      "label": "getTrains()",
+      "id": "frontend_src_api_blocks_approveblock",
+      "label": "approveBlock()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
-      "norm_label": "gettrains()",
-      "source_file": "frontend/src/api/client.js",
-      "source_location": "L29"
+      "norm_label": "approveblock()",
+      "source_file": "frontend/src/api/blocks.js",
+      "source_location": "L6"
     },
     {
-      "id": "frontend_src_api_client_getweeklyplan",
-      "label": "getWeeklyPlan()",
+      "id": "frontend_src_api_blocks_getblocks",
+      "label": "getBlocks()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
-      "norm_label": "getweeklyplan()",
-      "source_file": "frontend/src/api/client.js",
-      "source_location": "L39"
+      "norm_label": "getblocks()",
+      "source_file": "frontend/src/api/blocks.js",
+      "source_location": "L3"
     },
     {
-      "id": "frontend_src_api_client_optimizeblock",
+      "id": "frontend_src_api_blocks_optimizeblock",
       "label": "optimizeBlock()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "optimizeblock()",
-      "source_file": "frontend/src/api/client.js",
-      "source_location": "L34"
+      "source_file": "frontend/src/api/blocks.js",
+      "source_location": "L4"
     },
     {
-      "id": "frontend_src_api_client_saveblock",
+      "id": "frontend_src_api_blocks_reschedule",
+      "label": "reschedule()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "DashboardPage.jsx",
+      "file_type": "code",
+      "norm_label": "reschedule()",
+      "source_file": "frontend/src/api/blocks.js",
+      "source_location": "L7"
+    },
+    {
+      "id": "frontend_src_api_blocks_saveblock",
       "label": "saveBlock()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "saveblock()",
-      "source_file": "frontend/src/api/client.js",
-      "source_location": "L35"
+      "source_file": "frontend/src/api/blocks.js",
+      "source_location": "L5"
     },
     {
-      "id": "frontend_src_app_app",
-      "label": "App()",
+      "id": "frontend_src_api_index_getweeklyplan",
+      "label": "getWeeklyPlan()",
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
-      "norm_label": "app()",
-      "source_file": "frontend/src/App.jsx",
-      "source_location": "L14"
+      "norm_label": "getweeklyplan()",
+      "source_file": "frontend/src/api/index.js",
+      "source_location": "L7"
+    },
+    {
+      "id": "frontend_src_api_maintenance_createmaintenance",
+      "label": "createMaintenance()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "DashboardPage.jsx",
+      "file_type": "code",
+      "norm_label": "createmaintenance()",
+      "source_file": "frontend/src/api/maintenance.js",
+      "source_location": "L4"
+    },
+    {
+      "id": "frontend_src_api_maintenance_getassets",
+      "label": "getAssets()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "DashboardPage.jsx",
+      "file_type": "code",
+      "norm_label": "getassets()",
+      "source_file": "frontend/src/api/maintenance.js",
+      "source_location": "L6"
+    },
+    {
+      "id": "frontend_src_api_maintenance_getmaintenance",
+      "label": "getMaintenance()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "DashboardPage.jsx",
+      "file_type": "code",
+      "norm_label": "getmaintenance()",
+      "source_file": "frontend/src/api/maintenance.js",
+      "source_location": "L3"
+    },
+    {
+      "id": "frontend_src_api_maintenance_gettrains",
+      "label": "getTrains()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "DashboardPage.jsx",
+      "file_type": "code",
+      "norm_label": "gettrains()",
+      "source_file": "frontend/src/api/maintenance.js",
+      "source_location": "L7"
+    },
+    {
+      "id": "frontend_src_api_maintenance_getunifieddefects",
+      "label": "getUnifiedDefects()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "DashboardPage.jsx",
+      "file_type": "code",
+      "norm_label": "getunifieddefects()",
+      "source_file": "frontend/src/api/maintenance.js",
+      "source_location": "L5"
     },
     {
       "id": "frontend_src_components_kpicard_kpicard",
@@ -348,23 +360,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "kpicard()",
       "source_file": "frontend/src/components/KPICard.jsx",
       "source_location": "L1"
-    },
-    {
-      "id": "frontend_src_components_layout_layout",
-      "label": "Layout()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "client.js",
-      "file_type": "code",
-      "norm_label": "layout()",
-      "source_file": "frontend/src/components/Layout.jsx",
-      "source_location": "L6"
     },
     {
       "id": "frontend_src_components_statusbadge_statusbadge",
@@ -372,71 +372,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "statusbadge()",
       "source_file": "frontend/src/components/StatusBadge.jsx",
       "source_location": "L40"
-    },
-    {
-      "id": "frontend_src_components_topnav_topnav",
-      "label": "TopNav()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "client.js",
-      "file_type": "code",
-      "norm_label": "topnav()",
-      "source_file": "frontend/src/components/TopNav.jsx",
-      "source_location": "L18"
-    },
-    {
-      "id": "frontend_src_context_themecontext_themeprovider",
-      "label": "ThemeProvider()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "client.js",
-      "file_type": "code",
-      "norm_label": "themeprovider()",
-      "source_file": "frontend/src/context/ThemeContext.jsx",
-      "source_location": "L8"
-    },
-    {
-      "id": "frontend_src_context_themecontext_usetheme",
-      "label": "useTheme()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "client.js",
-      "file_type": "code",
-      "norm_label": "usetheme()",
-      "source_file": "frontend/src/context/ThemeContext.jsx",
-      "source_location": "L34"
-    },
-    {
-      "id": "frontend_src_pages_analyticspage_analyticspage",
-      "label": "AnalyticsPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "client.js",
-      "file_type": "code",
-      "norm_label": "analyticspage()",
-      "source_file": "frontend/src/pages/AnalyticsPage.jsx",
-      "source_location": "L24"
-    },
-    {
-      "id": "frontend_src_pages_beforeafterpage_beforeafterpage",
-      "label": "BeforeAfterPage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "client.js",
-      "file_type": "code",
-      "norm_label": "beforeafterpage()",
-      "source_file": "frontend/src/pages/BeforeAfterPage.jsx",
-      "source_location": "L19"
     },
     {
       "id": "frontend_src_pages_blockplannerpage_blockplannerpage",
@@ -444,11 +384,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "blockplannerpage()",
       "source_file": "frontend/src/pages/BlockPlannerPage.jsx",
-      "source_location": "L35"
+      "source_location": "L25"
     },
     {
       "id": "frontend_src_pages_blockplannerpage_blockplannerpage_applyoverride",
@@ -456,11 +396,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "applyoverride()",
       "source_file": "frontend/src/pages/BlockPlannerPage.jsx",
-      "source_location": "L152"
+      "source_location": "L142"
     },
     {
       "id": "frontend_src_pages_blockplannerpage_blockplannerpage_handleoptimize",
@@ -468,11 +408,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "handleoptimize()",
       "source_file": "frontend/src/pages/BlockPlannerPage.jsx",
-      "source_location": "L77"
+      "source_location": "L67"
     },
     {
       "id": "frontend_src_pages_blockplannerpage_blockplannerpage_handlesave",
@@ -480,11 +420,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "handlesave()",
       "source_file": "frontend/src/pages/BlockPlannerPage.jsx",
-      "source_location": "L122"
+      "source_location": "L112"
     },
     {
       "id": "frontend_src_pages_blockplannerpage_blockplannerpage_openoverridemodal",
@@ -492,11 +432,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "openoverridemodal()",
       "source_file": "frontend/src/pages/BlockPlannerPage.jsx",
-      "source_location": "L139"
+      "source_location": "L129"
     },
     {
       "id": "frontend_src_pages_blockplannerpage_blockplannerpage_toggletask",
@@ -504,11 +444,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "toggletask()",
       "source_file": "frontend/src/pages/BlockPlannerPage.jsx",
-      "source_location": "L132"
+      "source_location": "L122"
     },
     {
       "id": "frontend_src_pages_dashboardpage_dashboardpage",
@@ -516,11 +456,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "dashboardpage()",
       "source_file": "frontend/src/pages/DashboardPage.jsx",
-      "source_location": "L42"
+      "source_location": "L36"
     },
     {
       "id": "frontend_src_pages_dashboardpage_loadingskeleton",
@@ -528,11 +468,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "loadingskeleton()",
       "source_file": "frontend/src/pages/DashboardPage.jsx",
-      "source_location": "L383"
+      "source_location": "L377"
     },
     {
       "id": "frontend_src_pages_maintenancepage_maintenancepage",
@@ -540,11 +480,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "maintenancepage()",
       "source_file": "frontend/src/pages/MaintenancePage.jsx",
-      "source_location": "L25"
+      "source_location": "L26"
     },
     {
       "id": "frontend_src_pages_maintenancepage_maintenancepage_handlemergetasks",
@@ -552,11 +492,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "handlemergetasks()",
       "source_file": "frontend/src/pages/MaintenancePage.jsx",
-      "source_location": "L108"
+      "source_location": "L109"
     },
     {
       "id": "frontend_src_pages_maintenancepage_maintenancepage_handlesave",
@@ -564,11 +504,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "handlesave()",
       "source_file": "frontend/src/pages/MaintenancePage.jsx",
-      "source_location": "L131"
+      "source_location": "L132"
     },
     {
       "id": "frontend_src_pages_maintenancepage_maintenancepage_load",
@@ -576,11 +516,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "load()",
       "source_file": "frontend/src/pages/MaintenancePage.jsx",
-      "source_location": "L59"
+      "source_location": "L60"
     },
     {
       "id": "frontend_src_pages_maintenancepage_maintenancepage_toggleselectall",
@@ -588,11 +528,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "toggleselectall()",
       "source_file": "frontend/src/pages/MaintenancePage.jsx",
-      "source_location": "L99"
+      "source_location": "L100"
     },
     {
       "id": "frontend_src_pages_maintenancepage_maintenancepage_toggleselecttask",
@@ -600,11 +540,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "toggleselecttask()",
       "source_file": "frontend/src/pages/MaintenancePage.jsx",
-      "source_location": "L95"
+      "source_location": "L96"
     },
     {
       "id": "frontend_src_pages_maintenancepage_maintenancepage_togglesort",
@@ -612,11 +552,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "togglesort()",
       "source_file": "frontend/src/pages/MaintenancePage.jsx",
-      "source_location": "L87"
+      "source_location": "L88"
     },
     {
       "id": "frontend_src_pages_weeklyplanpage_fmt",
@@ -624,11 +564,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "fmt()",
       "source_file": "frontend/src/pages/WeeklyPlanPage.jsx",
-      "source_location": "L17"
+      "source_location": "L18"
     },
     {
       "id": "frontend_src_pages_weeklyplanpage_getmonday",
@@ -636,11 +576,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "getmonday()",
       "source_file": "frontend/src/pages/WeeklyPlanPage.jsx",
-      "source_location": "L9"
+      "source_location": "L10"
     },
     {
       "id": "frontend_src_pages_weeklyplanpage_weeklyplanpage",
@@ -648,11 +588,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "weeklyplanpage()",
       "source_file": "frontend/src/pages/WeeklyPlanPage.jsx",
-      "source_location": "L21"
+      "source_location": "L22"
     },
     {
       "id": "frontend_src_pages_weeklyplanpage_weeklyplanpage_changeweek",
@@ -660,11 +600,11 @@
       "_callable": true,
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "changeweek()",
       "source_file": "frontend/src/pages/WeeklyPlanPage.jsx",
-      "source_location": "L43"
+      "source_location": "L44"
     },
     {
       "id": "backend_database_hash_password",
@@ -691,6 +631,18 @@
       "source_location": "L97"
     },
     {
+      "id": "backend_models_reschedulerequest_delay_mins",
+      "label": ".delay_mins()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "test_upgrade.py",
+      "file_type": "code",
+      "norm_label": ".delay_mins()",
+      "source_file": "backend/models.py",
+      "source_location": "L187"
+    },
+    {
       "id": "backend_routers_auth_login",
       "label": "login()",
       "_callable": true,
@@ -703,6 +655,18 @@
       "source_location": "L10"
     },
     {
+      "id": "backend_routers_auth_session",
+      "label": "session()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "test_upgrade.py",
+      "file_type": "code",
+      "norm_label": "session()",
+      "source_file": "backend/routers/auth.py",
+      "source_location": "L72"
+    },
+    {
       "id": "backend_routers_auth_signup",
       "label": "signup()",
       "_callable": true,
@@ -713,6 +677,66 @@
       "norm_label": "signup()",
       "source_file": "backend/routers/auth.py",
       "source_location": "L37"
+    },
+    {
+      "id": "backend_routers_blocks_approve_block",
+      "label": "approve_block()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "test_upgrade.py",
+      "file_type": "code",
+      "norm_label": "approve_block()",
+      "source_file": "backend/routers/blocks.py",
+      "source_location": "L247"
+    },
+    {
+      "id": "backend_routers_blocks_generate_plan",
+      "label": "generate_plan()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "test_upgrade.py",
+      "file_type": "code",
+      "norm_label": "generate_plan()",
+      "source_file": "backend/routers/blocks.py",
+      "source_location": "L81"
+    },
+    {
+      "id": "backend_routers_blocks_optimize",
+      "label": "optimize()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "test_upgrade.py",
+      "file_type": "code",
+      "norm_label": "optimize()",
+      "source_file": "backend/routers/blocks.py",
+      "source_location": "L42"
+    },
+    {
+      "id": "backend_routers_blocks_reschedule",
+      "label": "reschedule()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "test_upgrade.py",
+      "file_type": "code",
+      "norm_label": "reschedule()",
+      "source_file": "backend/routers/blocks.py",
+      "source_location": "L131"
+    },
+    {
+      "id": "backend_routers_blocks_save_block",
+      "label": "save_block()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "test_upgrade.py",
+      "file_type": "code",
+      "norm_label": "save_block()",
+      "source_file": "backend/routers/blocks.py",
+      "source_location": "L259"
     },
     {
       "id": "backend_test_upgrade_fail",
@@ -763,64 +787,76 @@
       "source_location": "L6"
     },
     {
-      "id": "backend_seed_data_compute_risk_score",
-      "label": "_compute_risk_score()",
+      "id": "backend_database_init_db",
+      "label": "init_db()",
       "_callable": true,
       "_origin": "ast",
-      "community": 2,
-      "community_name": "seed_data.py",
+      "community": 4,
+      "community_name": "optimizer.py",
       "file_type": "code",
-      "norm_label": "_compute_risk_score()",
-      "source_file": "backend/seed_data.py",
-      "source_location": "L167"
+      "norm_label": "init_db()",
+      "source_file": "backend/database.py",
+      "source_location": "L22"
     },
     {
-      "id": "backend_seed_data_main",
-      "label": "main()",
+      "id": "backend_database_seed",
+      "label": "_seed()",
       "_callable": true,
       "_origin": "ast",
-      "community": 2,
-      "community_name": "seed_data.py",
+      "community": 4,
+      "community_name": "optimizer.py",
       "file_type": "code",
-      "norm_label": "main()",
-      "source_file": "backend/seed_data.py",
-      "source_location": "L304"
+      "norm_label": "_seed()",
+      "source_file": "backend/database.py",
+      "source_location": "L217"
     },
     {
-      "id": "backend_seed_data_seed_block_plans",
-      "label": "seed_block_plans()",
+      "id": "backend_database_seed_extended",
+      "label": "_seed_extended()",
       "_callable": true,
       "_origin": "ast",
-      "community": 2,
-      "community_name": "seed_data.py",
+      "community": 4,
+      "community_name": "optimizer.py",
       "file_type": "code",
-      "norm_label": "seed_block_plans()",
-      "source_file": "backend/seed_data.py",
-      "source_location": "L249"
+      "norm_label": "_seed_extended()",
+      "source_file": "backend/database.py",
+      "source_location": "L268"
     },
     {
-      "id": "backend_seed_data_seed_defects",
-      "label": "seed_defects()",
+      "id": "backend_main_health",
+      "label": "health()",
       "_callable": true,
       "_origin": "ast",
-      "community": 2,
-      "community_name": "seed_data.py",
+      "community": 4,
+      "community_name": "optimizer.py",
       "file_type": "code",
-      "norm_label": "seed_defects()",
-      "source_file": "backend/seed_data.py",
-      "source_location": "L206"
+      "norm_label": "health()",
+      "source_file": "backend/main.py",
+      "source_location": "L55"
     },
     {
-      "id": "backend_seed_data_seed_trains",
-      "label": "seed_trains()",
+      "id": "backend_main_lifespan",
+      "label": "lifespan()",
       "_callable": true,
       "_origin": "ast",
-      "community": 2,
-      "community_name": "seed_data.py",
+      "community": 4,
+      "community_name": "optimizer.py",
       "file_type": "code",
-      "norm_label": "seed_trains()",
-      "source_file": "backend/seed_data.py",
-      "source_location": "L176"
+      "norm_label": "lifespan()",
+      "source_file": "backend/main.py",
+      "source_location": "L14"
+    },
+    {
+      "id": "backend_main_root",
+      "label": "root()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "optimizer.py",
+      "file_type": "code",
+      "norm_label": "root()",
+      "source_file": "backend/main.py",
+      "source_location": "L45"
     },
     {
       "id": "backend_optimizer_build_corridor_lookup",
@@ -857,18 +893,6 @@
       "norm_label": "calculate_ai_risk_score()",
       "source_file": "backend/optimizer.py",
       "source_location": "L53"
-    },
-    {
-      "id": "backend_optimizer_calculate_task_duration_adjusted",
-      "label": "calculate_task_duration_adjusted()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "optimizer.py",
-      "file_type": "code",
-      "norm_label": "calculate_task_duration_adjusted()",
-      "source_file": "backend/optimizer.py",
-      "source_location": "L120"
     },
     {
       "id": "backend_optimizer_calculate_task_priority",
@@ -979,6 +1003,42 @@
       "source_location": "L166"
     },
     {
+      "id": "backend_routers_plans_get_mega_blocks",
+      "label": "get_mega_blocks()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "optimizer.py",
+      "file_type": "code",
+      "norm_label": "get_mega_blocks()",
+      "source_file": "backend/routers/plans.py",
+      "source_location": "L79"
+    },
+    {
+      "id": "backend_routers_plans_get_monthly_plan",
+      "label": "get_monthly_plan()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "optimizer.py",
+      "file_type": "code",
+      "norm_label": "get_monthly_plan()",
+      "source_file": "backend/routers/plans.py",
+      "source_location": "L144"
+    },
+    {
+      "id": "backend_routers_plans_get_weekly_plan",
+      "label": "get_weekly_plan()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "optimizer.py",
+      "file_type": "code",
+      "norm_label": "get_weekly_plan()",
+      "source_file": "backend/routers/plans.py",
+      "source_location": "L11"
+    },
+    {
       "id": "backend_test_backend_engine_test_backend",
       "label": "test_backend()",
       "_callable": true,
@@ -1003,76 +1063,16 @@
       "source_location": "L10"
     },
     {
-      "id": "backend_database_init_db",
-      "label": "init_db()",
+      "id": "backend_optimizer_calculate_task_duration_adjusted",
+      "label": "calculate_task_duration_adjusted()",
       "_callable": true,
       "_origin": "ast",
       "community": 5,
       "community_name": "get_db",
       "file_type": "code",
-      "norm_label": "init_db()",
-      "source_file": "backend/database.py",
-      "source_location": "L22"
-    },
-    {
-      "id": "backend_database_seed",
-      "label": "_seed()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "get_db",
-      "file_type": "code",
-      "norm_label": "_seed()",
-      "source_file": "backend/database.py",
-      "source_location": "L217"
-    },
-    {
-      "id": "backend_database_seed_extended",
-      "label": "_seed_extended()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "get_db",
-      "file_type": "code",
-      "norm_label": "_seed_extended()",
-      "source_file": "backend/database.py",
-      "source_location": "L268"
-    },
-    {
-      "id": "backend_main_health",
-      "label": "health()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "get_db",
-      "file_type": "code",
-      "norm_label": "health()",
-      "source_file": "backend/main.py",
-      "source_location": "L55"
-    },
-    {
-      "id": "backend_main_lifespan",
-      "label": "lifespan()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "get_db",
-      "file_type": "code",
-      "norm_label": "lifespan()",
-      "source_file": "backend/main.py",
-      "source_location": "L14"
-    },
-    {
-      "id": "backend_main_root",
-      "label": "root()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "get_db",
-      "file_type": "code",
-      "norm_label": "root()",
-      "source_file": "backend/main.py",
-      "source_location": "L45"
+      "norm_label": "calculate_task_duration_adjusted()",
+      "source_file": "backend/optimizer.py",
+      "source_location": "L120"
     },
     {
       "id": "backend_routers_analytics_get_analytics",
@@ -1159,30 +1159,6 @@
       "source_location": "L54"
     },
     {
-      "id": "backend_routers_blocks_approve_block",
-      "label": "approve_block()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "get_db",
-      "file_type": "code",
-      "norm_label": "approve_block()",
-      "source_file": "backend/routers/blocks.py",
-      "source_location": "L198"
-    },
-    {
-      "id": "backend_routers_blocks_generate_plan",
-      "label": "generate_plan()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "get_db",
-      "file_type": "code",
-      "norm_label": "generate_plan()",
-      "source_file": "backend/routers/blocks.py",
-      "source_location": "L74"
-    },
-    {
       "id": "backend_routers_blocks_get_blocks",
       "label": "get_blocks()",
       "_callable": true,
@@ -1192,19 +1168,7 @@
       "file_type": "code",
       "norm_label": "get_blocks()",
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L11"
-    },
-    {
-      "id": "backend_routers_blocks_optimize",
-      "label": "optimize()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "get_db",
-      "file_type": "code",
-      "norm_label": "optimize()",
-      "source_file": "backend/routers/blocks.py",
-      "source_location": "L35"
+      "source_location": "L18"
     },
     {
       "id": "backend_routers_blocks_optimizer_status",
@@ -1216,31 +1180,7 @@
       "file_type": "code",
       "norm_label": "optimizer_status()",
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L162"
-    },
-    {
-      "id": "backend_routers_blocks_reschedule",
-      "label": "reschedule()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "get_db",
-      "file_type": "code",
-      "norm_label": "reschedule()",
-      "source_file": "backend/routers/blocks.py",
-      "source_location": "L124"
-    },
-    {
-      "id": "backend_routers_blocks_save_block",
-      "label": "save_block()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "get_db",
-      "file_type": "code",
-      "norm_label": "save_block()",
-      "source_file": "backend/routers/blocks.py",
-      "source_location": "L210"
+      "source_location": "L211"
     },
     {
       "id": "backend_routers_maintenance_compute_priority",
@@ -1291,64 +1231,124 @@
       "source_location": "L24"
     },
     {
-      "id": "backend_routers_plans_get_mega_blocks",
-      "label": "get_mega_blocks()",
+      "id": "backend_seed_data_compute_risk_score",
+      "label": "_compute_risk_score()",
       "_callable": true,
       "_origin": "ast",
       "community": 5,
       "community_name": "get_db",
       "file_type": "code",
-      "norm_label": "get_mega_blocks()",
-      "source_file": "backend/routers/plans.py",
-      "source_location": "L79"
+      "norm_label": "_compute_risk_score()",
+      "source_file": "backend/seed_data.py",
+      "source_location": "L167"
     },
     {
-      "id": "backend_routers_plans_get_monthly_plan",
-      "label": "get_monthly_plan()",
+      "id": "backend_seed_data_main",
+      "label": "main()",
       "_callable": true,
       "_origin": "ast",
       "community": 5,
       "community_name": "get_db",
       "file_type": "code",
-      "norm_label": "get_monthly_plan()",
-      "source_file": "backend/routers/plans.py",
-      "source_location": "L144"
+      "norm_label": "main()",
+      "source_file": "backend/seed_data.py",
+      "source_location": "L304"
     },
     {
-      "id": "backend_routers_plans_get_weekly_plan",
-      "label": "get_weekly_plan()",
+      "id": "backend_seed_data_seed_block_plans",
+      "label": "seed_block_plans()",
       "_callable": true,
       "_origin": "ast",
       "community": 5,
       "community_name": "get_db",
       "file_type": "code",
-      "norm_label": "get_weekly_plan()",
-      "source_file": "backend/routers/plans.py",
-      "source_location": "L11"
+      "norm_label": "seed_block_plans()",
+      "source_file": "backend/seed_data.py",
+      "source_location": "L249"
     },
     {
-      "id": "frontend_src_api_client_login",
+      "id": "backend_seed_data_seed_defects",
+      "label": "seed_defects()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "get_db",
+      "file_type": "code",
+      "norm_label": "seed_defects()",
+      "source_file": "backend/seed_data.py",
+      "source_location": "L206"
+    },
+    {
+      "id": "backend_seed_data_seed_trains",
+      "label": "seed_trains()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "get_db",
+      "file_type": "code",
+      "norm_label": "seed_trains()",
+      "source_file": "backend/seed_data.py",
+      "source_location": "L176"
+    },
+    {
+      "id": "frontend_src_api_analytics_getanalytics",
+      "label": "getAnalytics()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "getanalytics()",
+      "source_file": "frontend/src/api/analytics.js",
+      "source_location": "L3"
+    },
+    {
+      "id": "frontend_src_api_auth_login",
       "label": "login()",
       "_callable": true,
       "_origin": "ast",
       "community": 9,
-      "community_name": "LoginPage.jsx",
+      "community_name": "App.jsx",
       "file_type": "code",
       "norm_label": "login()",
-      "source_file": "frontend/src/api/client.js",
-      "source_location": "L17"
+      "source_file": "frontend/src/api/auth.js",
+      "source_location": "L3"
     },
     {
-      "id": "frontend_src_api_client_signup",
+      "id": "frontend_src_api_auth_signup",
       "label": "signup()",
       "_callable": true,
       "_origin": "ast",
       "community": 9,
-      "community_name": "LoginPage.jsx",
+      "community_name": "App.jsx",
       "file_type": "code",
       "norm_label": "signup()",
-      "source_file": "frontend/src/api/client.js",
-      "source_location": "L20"
+      "source_file": "frontend/src/api/auth.js",
+      "source_location": "L4"
+    },
+    {
+      "id": "frontend_src_app_app",
+      "label": "App()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "app()",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L15"
+    },
+    {
+      "id": "frontend_src_components_layout_layout",
+      "label": "Layout()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "layout()",
+      "source_file": "frontend/src/components/Layout.jsx",
+      "source_location": "L5"
     },
     {
       "id": "frontend_src_components_sidebar_sidebar",
@@ -1356,7 +1356,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 9,
-      "community_name": "LoginPage.jsx",
+      "community_name": "App.jsx",
       "file_type": "code",
       "norm_label": "sidebar()",
       "source_file": "frontend/src/components/Sidebar.jsx",
@@ -1368,11 +1368,71 @@
       "_callable": true,
       "_origin": "ast",
       "community": 9,
-      "community_name": "LoginPage.jsx",
+      "community_name": "App.jsx",
       "file_type": "code",
       "norm_label": "handlelogout()",
       "source_file": "frontend/src/components/Sidebar.jsx",
       "source_location": "L32"
+    },
+    {
+      "id": "frontend_src_components_topnav_topnav",
+      "label": "TopNav()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "topnav()",
+      "source_file": "frontend/src/components/TopNav.jsx",
+      "source_location": "L18"
+    },
+    {
+      "id": "frontend_src_context_themecontext_themeprovider",
+      "label": "ThemeProvider()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "themeprovider()",
+      "source_file": "frontend/src/context/ThemeContext.jsx",
+      "source_location": "L8"
+    },
+    {
+      "id": "frontend_src_context_themecontext_usetheme",
+      "label": "useTheme()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "usetheme()",
+      "source_file": "frontend/src/context/ThemeContext.jsx",
+      "source_location": "L34"
+    },
+    {
+      "id": "frontend_src_pages_analyticspage_analyticspage",
+      "label": "AnalyticsPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "analyticspage()",
+      "source_file": "frontend/src/pages/AnalyticsPage.jsx",
+      "source_location": "L24"
+    },
+    {
+      "id": "frontend_src_pages_beforeafterpage_beforeafterpage",
+      "label": "BeforeAfterPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "beforeafterpage()",
+      "source_file": "frontend/src/pages/BeforeAfterPage.jsx",
+      "source_location": "L19"
     },
     {
       "id": "frontend_src_pages_loginpage_loginpage",
@@ -1380,7 +1440,7 @@
       "_callable": true,
       "_origin": "ast",
       "community": 9,
-      "community_name": "LoginPage.jsx",
+      "community_name": "App.jsx",
       "file_type": "code",
       "norm_label": "loginpage()",
       "source_file": "frontend/src/pages/LoginPage.jsx",
@@ -1392,54 +1452,98 @@
       "_callable": true,
       "_origin": "ast",
       "community": 9,
-      "community_name": "LoginPage.jsx",
+      "community_name": "App.jsx",
       "file_type": "code",
       "norm_label": "handlesubmit()",
       "source_file": "frontend/src/pages/LoginPage.jsx",
       "source_location": "L16"
     },
     {
-      "id": "frontend_oxlintrc_plugins",
-      "label": "plugins",
+      "id": "frontend_src_api_analytics",
+      "label": "analytics.js",
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
-      "norm_label": "plugins",
-      "source_file": "frontend/.oxlintrc.json",
-      "source_location": "L3"
+      "norm_label": "analytics.js",
+      "source_file": "frontend/src/api/analytics.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "frontend_src_api_auth",
+      "label": "auth.js",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "DashboardPage.jsx",
+      "file_type": "code",
+      "norm_label": "auth.js",
+      "source_file": "frontend/src/api/auth.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "frontend_src_api_blocks",
+      "label": "blocks.js",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "DashboardPage.jsx",
+      "file_type": "code",
+      "norm_label": "blocks.js",
+      "source_file": "frontend/src/api/blocks.js",
+      "source_location": "L1"
     },
     {
       "id": "frontend_src_api_client",
       "label": "client.js",
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "client.js",
       "source_file": "frontend/src/api/client.js",
       "source_location": "L1"
     },
     {
-      "id": "frontend_src_api_client_api",
+      "id": "frontend_src_api_http",
+      "label": "http.js",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "DashboardPage.jsx",
+      "file_type": "code",
+      "norm_label": "http.js",
+      "source_file": "frontend/src/api/http.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "frontend_src_api_http_api",
       "label": "api",
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "api",
-      "source_file": "frontend/src/api/client.js",
+      "source_file": "frontend/src/api/http.js",
       "source_location": "L3"
     },
     {
-      "id": "frontend_src_app",
-      "label": "App.jsx",
+      "id": "frontend_src_api_index",
+      "label": "index.js",
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
-      "norm_label": "app.jsx",
-      "source_file": "frontend/src/App.jsx",
+      "norm_label": "index.js",
+      "source_file": "frontend/src/api/index.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "frontend_src_api_maintenance",
+      "label": "maintenance.js",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "DashboardPage.jsx",
+      "file_type": "code",
+      "norm_label": "maintenance.js",
+      "source_file": "frontend/src/api/maintenance.js",
       "source_location": "L1"
     },
     {
@@ -1447,21 +1551,10 @@
       "label": "KPICard.jsx",
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "kpicard.jsx",
       "source_file": "frontend/src/components/KPICard.jsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "frontend_src_components_layout",
-      "label": "Layout.jsx",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "client.js",
-      "file_type": "code",
-      "norm_label": "layout.jsx",
-      "source_file": "frontend/src/components/Layout.jsx",
       "source_location": "L1"
     },
     {
@@ -1469,7 +1562,7 @@
       "label": "StatusBadge.jsx",
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "statusbadge.jsx",
       "source_file": "frontend/src/components/StatusBadge.jsx",
@@ -1480,7 +1573,7 @@
       "label": "configs",
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "configs",
       "source_file": "frontend/src/components/StatusBadge.jsx",
@@ -1491,109 +1584,43 @@
       "label": "dots",
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "dots",
       "source_file": "frontend/src/components/StatusBadge.jsx",
       "source_location": "L23"
     },
     {
-      "id": "frontend_src_components_topnav",
-      "label": "TopNav.jsx",
+      "id": "frontend_src_constants_colors",
+      "label": "colors.js",
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
-      "norm_label": "topnav.jsx",
-      "source_file": "frontend/src/components/TopNav.jsx",
+      "norm_label": "colors.js",
+      "source_file": "frontend/src/constants/colors.js",
       "source_location": "L1"
     },
     {
-      "id": "frontend_src_components_topnav_pagetitles",
-      "label": "pageTitles",
+      "id": "frontend_src_constants_colors_dept_badge_style",
+      "label": "DEPT_BADGE_STYLE",
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
-      "norm_label": "pagetitles",
-      "source_file": "frontend/src/components/TopNav.jsx",
-      "source_location": "L7"
+      "norm_label": "dept_badge_style",
+      "source_file": "frontend/src/constants/colors.js",
+      "source_location": "L8"
     },
     {
-      "id": "frontend_src_context_themecontext",
-      "label": "ThemeContext.jsx",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "client.js",
-      "file_type": "code",
-      "norm_label": "themecontext.jsx",
-      "source_file": "frontend/src/context/ThemeContext.jsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "frontend_src_context_themecontext_themecontext",
-      "label": "ThemeContext",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "client.js",
-      "file_type": "code",
-      "norm_label": "themecontext",
-      "source_file": "frontend/src/context/ThemeContext.jsx",
-      "source_location": "L3"
-    },
-    {
-      "id": "frontend_src_main",
-      "label": "main.jsx",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "client.js",
-      "file_type": "code",
-      "norm_label": "main.jsx",
-      "source_file": "frontend/src/main.jsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "frontend_src_pages_analyticspage",
-      "label": "AnalyticsPage.jsx",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "client.js",
-      "file_type": "code",
-      "norm_label": "analyticspage.jsx",
-      "source_file": "frontend/src/pages/AnalyticsPage.jsx",
-      "source_location": "L1"
-    },
-    {
-      "id": "frontend_src_pages_analyticspage_dept_colors",
+      "id": "frontend_src_constants_colors_dept_colors",
       "label": "DEPT_COLORS",
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "dept_colors",
-      "source_file": "frontend/src/pages/AnalyticsPage.jsx",
-      "source_location": "L21"
-    },
-    {
-      "id": "frontend_src_pages_analyticspage_pie_colors",
-      "label": "PIE_COLORS",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "client.js",
-      "file_type": "code",
-      "norm_label": "pie_colors",
-      "source_file": "frontend/src/pages/AnalyticsPage.jsx",
-      "source_location": "L22"
-    },
-    {
-      "id": "frontend_src_pages_beforeafterpage",
-      "label": "BeforeAfterPage.jsx",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "client.js",
-      "file_type": "code",
-      "norm_label": "beforeafterpage.jsx",
-      "source_file": "frontend/src/pages/BeforeAfterPage.jsx",
+      "source_file": "frontend/src/constants/colors.js",
       "source_location": "L1"
     },
     {
@@ -1601,62 +1628,29 @@
       "label": "BlockPlannerPage.jsx",
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "blockplannerpage.jsx",
       "source_file": "frontend/src/pages/BlockPlannerPage.jsx",
       "source_location": "L1"
     },
     {
-      "id": "frontend_src_pages_blockplannerpage_dept_badge_style",
-      "label": "DEPT_BADGE_STYLE",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "client.js",
-      "file_type": "code",
-      "norm_label": "dept_badge_style",
-      "source_file": "frontend/src/pages/BlockPlannerPage.jsx",
-      "source_location": "L22"
-    },
-    {
-      "id": "frontend_src_pages_blockplannerpage_dept_bar_color",
-      "label": "DEPT_BAR_COLOR",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "client.js",
-      "file_type": "code",
-      "norm_label": "dept_bar_color",
-      "source_file": "frontend/src/pages/BlockPlannerPage.jsx",
-      "source_location": "L28"
-    },
-    {
       "id": "frontend_src_pages_dashboardpage",
       "label": "DashboardPage.jsx",
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "dashboardpage.jsx",
       "source_file": "frontend/src/pages/DashboardPage.jsx",
       "source_location": "L1"
     },
     {
-      "id": "frontend_src_pages_dashboardpage_dept_colors",
-      "label": "DEPT_COLORS",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "client.js",
-      "file_type": "code",
-      "norm_label": "dept_colors",
-      "source_file": "frontend/src/pages/DashboardPage.jsx",
-      "source_location": "L35"
-    },
-    {
       "id": "frontend_src_pages_maintenancepage",
       "label": "MaintenancePage.jsx",
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "maintenancepage.jsx",
       "source_file": "frontend/src/pages/MaintenancePage.jsx",
@@ -1667,18 +1661,18 @@
       "label": "DEPTS",
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "depts",
       "source_file": "frontend/src/pages/MaintenancePage.jsx",
-      "source_location": "L18"
+      "source_location": "L19"
     },
     {
       "id": "frontend_src_pages_weeklyplanpage",
       "label": "WeeklyPlanPage.jsx",
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "weeklyplanpage.jsx",
       "source_file": "frontend/src/pages/WeeklyPlanPage.jsx",
@@ -1689,44 +1683,22 @@
       "label": "DAY_SHORT",
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "day_short",
       "source_file": "frontend/src/pages/WeeklyPlanPage.jsx",
-      "source_location": "L7"
+      "source_location": "L8"
     },
     {
       "id": "frontend_src_pages_weeklyplanpage_days",
       "label": "DAYS",
       "_origin": "ast",
       "community": 0,
-      "community_name": "client.js",
+      "community_name": "DashboardPage.jsx",
       "file_type": "code",
       "norm_label": "days",
       "source_file": "frontend/src/pages/WeeklyPlanPage.jsx",
-      "source_location": "L6"
-    },
-    {
-      "id": "ref_oxc",
-      "label": "oxc",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "client.js",
-      "file_type": "concept",
-      "norm_label": "oxc",
-      "source_file": "frontend/.oxlintrc.json",
-      "source_location": "L3"
-    },
-    {
-      "id": "ref_react",
-      "label": "react",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "client.js",
-      "file_type": "concept",
-      "norm_label": "react",
-      "source_file": "frontend/.oxlintrc.json",
-      "source_location": "L3"
+      "source_location": "L7"
     },
     {
       "id": "backend_models",
@@ -1762,7 +1734,40 @@
       "source_location": "L1"
     },
     {
+      "id": "backend_routers_auth_py_get",
+      "label": "get",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "test_upgrade.py",
+      "file_type": "code",
+      "norm_label": "get",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "backend_routers_auth_py_post",
+      "label": "post",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "test_upgrade.py",
+      "file_type": "code",
+      "norm_label": "post",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "backend_routers_blocks",
+      "label": "blocks.py",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "test_upgrade.py",
+      "file_type": "code",
+      "norm_label": "blocks.py",
+      "source_file": "backend/routers/blocks.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_routers_blocks_py_post",
       "label": "post",
       "_origin": "ast",
       "community": 1,
@@ -1837,6 +1842,50 @@
       "norm_label": "convert a unified_defects db row into a defectlog.",
       "source_file": "backend/models.py",
       "source_location": "L98"
+    },
+    {
+      "id": "backend_routers_auth_rationale_73",
+      "label": "Return the user represented by the application's mock bearer token.",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "test_upgrade.py",
+      "file_type": "rationale",
+      "norm_label": "return the user represented by the application's mock bearer token.",
+      "source_file": "backend/routers/auth.py",
+      "source_location": "L73"
+    },
+    {
+      "id": "backend_routers_blocks_rationale_132",
+      "label": "Event-driven rescheduling when a train is delayed. Accepts: train_id (int),\u2026",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "test_upgrade.py",
+      "file_type": "rationale",
+      "norm_label": "event-driven rescheduling when a train is delayed. accepts: train_id (int),...",
+      "source_file": "backend/routers/blocks.py",
+      "source_location": "L132"
+    },
+    {
+      "id": "backend_routers_blocks_rationale_260",
+      "label": "Save an AI-generated optimization result as a block record.",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "test_upgrade.py",
+      "file_type": "rationale",
+      "norm_label": "save an ai-generated optimization result as a block record.",
+      "source_file": "backend/routers/blocks.py",
+      "source_location": "L260"
+    },
+    {
+      "id": "backend_routers_blocks_rationale_82",
+      "label": "Triggers Google OR-Tools CP-SAT Solver for a specified horizon and corridor.\u2026",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "test_upgrade.py",
+      "file_type": "rationale",
+      "norm_label": "triggers google or-tools cp-sat solver for a specified horizon and corridor....",
+      "source_file": "backend/routers/blocks.py",
+      "source_location": "L82"
     },
     {
       "id": "backend_test_upgrade_rationale_1",
@@ -1927,17 +1976,6 @@
       "source_location": "L1"
     },
     {
-      "id": "any",
-      "label": "Any",
-      "_origin": "ast",
-      "community": 12,
-      "community_name": "Any",
-      "file_type": "code",
-      "norm_label": "any",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "frontend_vite_config",
       "label": "vite.config.js",
       "_origin": "ast",
@@ -1949,59 +1987,124 @@
       "source_location": "L1"
     },
     {
-      "id": "backend_seed_data",
-      "label": "seed_data.py",
+      "id": "readme",
+      "label": "README.md",
       "_origin": "ast",
       "community": 2,
-      "community_name": "seed_data.py",
-      "file_type": "code",
-      "norm_label": "seed_data.py",
-      "source_file": "backend/seed_data.py",
+      "community_name": "RailOpt \u2014 Automatic Railway Block Planning System",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "readme.md",
+      "source_file": "README.md",
       "source_location": "L1"
     },
     {
-      "id": "backend_seed_data_rationale_168",
-      "label": "Compute AI Risk Score using spec formula:\u2026",
+      "id": "readme_1_backend_setup_fastapi_google_or_tools",
+      "label": "1. Backend Setup (FastAPI + Google OR-Tools)",
       "_origin": "ast",
       "community": 2,
-      "community_name": "seed_data.py",
-      "file_type": "rationale",
-      "norm_label": "compute ai risk score using spec formula:...",
-      "source_file": "backend/seed_data.py",
-      "source_location": "L168"
+      "community_name": "RailOpt \u2014 Automatic Railway Block Planning System",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. backend setup (fastapi + google or-tools)",
+      "source_file": "README.md",
+      "source_location": "L25"
     },
     {
-      "id": "backend_seed_data_rationale_177",
-      "label": "Insert daily train slots into train_schedules and legacy trains table.",
+      "id": "readme_2_frontend_setup_react_vite_tailwind_css",
+      "label": "2. Frontend Setup (React + Vite + Tailwind CSS)",
       "_origin": "ast",
       "community": 2,
-      "community_name": "seed_data.py",
-      "file_type": "rationale",
-      "norm_label": "insert daily train slots into train_schedules and legacy trains table.",
-      "source_file": "backend/seed_data.py",
-      "source_location": "L177"
+      "community_name": "RailOpt \u2014 Automatic Railway Block Planning System",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. frontend setup (react + vite + tailwind css)",
+      "source_file": "README.md",
+      "source_location": "L45"
     },
     {
-      "id": "backend_seed_data_rationale_207",
-      "label": "Insert multi-department defect logs into unified_defects and maintenance_tasks.",
+      "id": "readme_active_server_status",
+      "label": "\ud83d\ude80 Active Server Status",
       "_origin": "ast",
       "community": 2,
-      "community_name": "seed_data.py",
-      "file_type": "rationale",
-      "norm_label": "insert multi-department defect logs into unified_defects and maintenance_tasks.",
-      "source_file": "backend/seed_data.py",
-      "source_location": "L207"
+      "community_name": "RailOpt \u2014 Automatic Railway Block Planning System",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\ude80 active server status",
+      "source_file": "README.md",
+      "source_location": "L8"
     },
     {
-      "id": "backend_seed_data_rationale_250",
-      "label": "Insert pre-computed Mega-Block plans from the seeded defects.",
+      "id": "readme_architecture_features",
+      "label": "\u2699\ufe0f Architecture & Features",
       "_origin": "ast",
       "community": 2,
-      "community_name": "seed_data.py",
-      "file_type": "rationale",
-      "norm_label": "insert pre-computed mega-block plans from the seeded defects.",
-      "source_file": "backend/seed_data.py",
-      "source_location": "L250"
+      "community_name": "RailOpt \u2014 Automatic Railway Block Planning System",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u2699\ufe0f architecture & features",
+      "source_file": "README.md",
+      "source_location": "L75"
+    },
+    {
+      "id": "readme_demo_officer_login_credentials",
+      "label": "\ud83d\udd10 Demo Officer Login Credentials",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "RailOpt \u2014 Automatic Railway Block Planning System",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udd10 demo officer login credentials",
+      "source_file": "README.md",
+      "source_location": "L65"
+    },
+    {
+      "id": "readme_installation_setup_instructions",
+      "label": "\ud83d\udce6 Installation & Setup Instructions",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "RailOpt \u2014 Automatic Railway Block Planning System",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udce6 installation & setup instructions",
+      "source_file": "README.md",
+      "source_location": "L23"
+    },
+    {
+      "id": "readme_prerequisites",
+      "label": "\ud83d\udee0\ufe0f Prerequisites",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "RailOpt \u2014 Automatic Railway Block Planning System",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udee0\ufe0f prerequisites",
+      "source_file": "README.md",
+      "source_location": "L16"
+    },
+    {
+      "id": "readme_primary_api_endpoints",
+      "label": "\ud83d\udce1 Primary API Endpoints",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "RailOpt \u2014 Automatic Railway Block Planning System",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udce1 primary api endpoints",
+      "source_file": "README.md",
+      "source_location": "L90"
+    },
+    {
+      "id": "readme_railopt_automatic_railway_block_planning_system",
+      "label": "RailOpt \u2014 Automatic Railway Block Planning System",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "RailOpt \u2014 Automatic Railway Block Planning System",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "railopt \u2014 automatic railway block planning system",
+      "source_file": "README.md",
+      "source_location": "L1"
     },
     {
       "id": "package",
@@ -2334,6 +2437,17 @@
       "source_location": "L32"
     },
     {
+      "id": "backend_database",
+      "label": "database.py",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "optimizer.py",
+      "file_type": "code",
+      "norm_label": "database.py",
+      "source_file": "backend/database.py",
+      "source_location": "L1"
+    },
+    {
       "id": "backend_debug2",
       "label": "debug2.py",
       "_origin": "ast",
@@ -2354,6 +2468,28 @@
       "norm_label": "debug_solver.py",
       "source_file": "backend/debug_solver.py",
       "source_location": "L1"
+    },
+    {
+      "id": "backend_main",
+      "label": "main.py",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "optimizer.py",
+      "file_type": "code",
+      "norm_label": "main.py",
+      "source_file": "backend/main.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_main_py_get",
+      "label": "get",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "optimizer.py",
+      "file_type": "code",
+      "norm_label": "get",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "backend_optimizer",
@@ -2378,6 +2514,39 @@
       "source_location": ""
     },
     {
+      "id": "backend_routers_analytics",
+      "label": "analytics.py",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "optimizer.py",
+      "file_type": "code",
+      "norm_label": "analytics.py",
+      "source_file": "backend/routers/analytics.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_routers_plans",
+      "label": "plans.py",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "optimizer.py",
+      "file_type": "code",
+      "norm_label": "plans.py",
+      "source_file": "backend/routers/plans.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "backend_routers_plans_py_get",
+      "label": "get",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "optimizer.py",
+      "file_type": "code",
+      "norm_label": "get",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "backend_test_backend_engine",
       "label": "test_backend_engine.py",
       "_origin": "ast",
@@ -2389,13 +2558,13 @@
       "source_location": "L1"
     },
     {
-      "id": "date",
-      "label": "date",
+      "id": "fastapi",
+      "label": "FastAPI",
       "_origin": "ast",
       "community": 4,
       "community_name": "optimizer.py",
       "file_type": "code",
-      "norm_label": "date",
+      "norm_label": "fastapi",
       "source_file": "",
       "source_location": ""
     },
@@ -2453,17 +2622,6 @@
       "norm_label": "legacy compatibility shim: returns risk score scaled to 0\u201310.",
       "source_file": "backend/optimizer.py",
       "source_location": "L112"
-    },
-    {
-      "id": "backend_optimizer_rationale_125",
-      "label": "Adjust maintenance task duration based on operational environment. Per spec:\u2026",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "optimizer.py",
-      "file_type": "rationale",
-      "norm_label": "adjust maintenance task duration based on operational environment. per spec:...",
-      "source_file": "backend/optimizer.py",
-      "source_location": "L125"
     },
     {
       "id": "backend_optimizer_rationale_161",
@@ -2554,48 +2712,37 @@
       "source_location": "L97"
     },
     {
-      "id": "backend_database",
-      "label": "database.py",
+      "id": "backend_routers_plans_rationale_12",
+      "label": "Returns the weekly maintenance plan with blocks and Mega-Block details.\u2026",
       "_origin": "ast",
-      "community": 5,
-      "community_name": "get_db",
-      "file_type": "code",
-      "norm_label": "database.py",
-      "source_file": "backend/database.py",
-      "source_location": "L1"
+      "community": 4,
+      "community_name": "optimizer.py",
+      "file_type": "rationale",
+      "norm_label": "returns the weekly maintenance plan with blocks and mega-block details....",
+      "source_file": "backend/routers/plans.py",
+      "source_location": "L12"
     },
     {
-      "id": "backend_main",
-      "label": "main.py",
+      "id": "backend_routers_plans_rationale_149",
+      "label": "Returns the monthly maintenance plan (long-term overhaul horizon). Uses the OR-\u2026",
       "_origin": "ast",
-      "community": 5,
-      "community_name": "get_db",
-      "file_type": "code",
-      "norm_label": "main.py",
-      "source_file": "backend/main.py",
-      "source_location": "L1"
+      "community": 4,
+      "community_name": "optimizer.py",
+      "file_type": "rationale",
+      "norm_label": "returns the monthly maintenance plan (long-term overhaul horizon). uses the or-...",
+      "source_file": "backend/routers/plans.py",
+      "source_location": "L149"
     },
     {
-      "id": "backend_main_py_get",
-      "label": "get",
+      "id": "backend_routers_plans_rationale_84",
+      "label": "Returns all Mega-Block plans from the block_plans table. JSON fields\u2026",
       "_origin": "ast",
-      "community": 5,
-      "community_name": "get_db",
-      "file_type": "code",
-      "norm_label": "get",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "backend_routers_analytics",
-      "label": "analytics.py",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "get_db",
-      "file_type": "code",
-      "norm_label": "analytics.py",
-      "source_file": "backend/routers/analytics.py",
-      "source_location": "L1"
+      "community": 4,
+      "community_name": "optimizer.py",
+      "file_type": "rationale",
+      "norm_label": "returns all mega-block plans from the block_plans table. json fields...",
+      "source_file": "backend/routers/plans.py",
+      "source_location": "L84"
     },
     {
       "id": "backend_routers_analytics_py_get",
@@ -2642,17 +2789,6 @@
       "source_location": ""
     },
     {
-      "id": "backend_routers_blocks",
-      "label": "blocks.py",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "get_db",
-      "file_type": "code",
-      "norm_label": "blocks.py",
-      "source_file": "backend/routers/blocks.py",
-      "source_location": "L1"
-    },
-    {
       "id": "backend_routers_blocks_py_get",
       "label": "get",
       "_origin": "ast",
@@ -2660,17 +2796,6 @@
       "community_name": "get_db",
       "file_type": "code",
       "norm_label": "get",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "backend_routers_blocks_py_post",
-      "label": "post",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "get_db",
-      "file_type": "code",
-      "norm_label": "post",
       "source_file": "",
       "source_location": ""
     },
@@ -2708,37 +2833,37 @@
       "source_location": ""
     },
     {
-      "id": "backend_routers_plans",
-      "label": "plans.py",
+      "id": "backend_seed_data",
+      "label": "seed_data.py",
       "_origin": "ast",
       "community": 5,
       "community_name": "get_db",
       "file_type": "code",
-      "norm_label": "plans.py",
-      "source_file": "backend/routers/plans.py",
+      "norm_label": "seed_data.py",
+      "source_file": "backend/seed_data.py",
       "source_location": "L1"
     },
     {
-      "id": "backend_routers_plans_py_get",
-      "label": "get",
+      "id": "date",
+      "label": "date",
       "_origin": "ast",
       "community": 5,
       "community_name": "get_db",
       "file_type": "code",
-      "norm_label": "get",
+      "norm_label": "date",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "fastapi",
-      "label": "FastAPI",
+      "id": "backend_optimizer_rationale_125",
+      "label": "Adjust maintenance task duration based on operational environment. Per spec:\u2026",
       "_origin": "ast",
       "community": 5,
       "community_name": "get_db",
-      "file_type": "code",
-      "norm_label": "fastapi",
-      "source_file": "",
-      "source_location": ""
+      "file_type": "rationale",
+      "norm_label": "adjust maintenance task duration based on operational environment. per spec:...",
+      "source_file": "backend/optimizer.py",
+      "source_location": "L125"
     },
     {
       "id": "backend_routers_assets_rationale_15",
@@ -2774,18 +2899,7 @@
       "source_location": "L55"
     },
     {
-      "id": "backend_routers_blocks_rationale_125",
-      "label": "Event-driven rescheduling when a train is delayed. Accepts: train_id (int),\u2026",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "get_db",
-      "file_type": "rationale",
-      "norm_label": "event-driven rescheduling when a train is delayed. accepts: train_id (int),...",
-      "source_file": "backend/routers/blocks.py",
-      "source_location": "L125"
-    },
-    {
-      "id": "backend_routers_blocks_rationale_163",
+      "id": "backend_routers_blocks_rationale_212",
       "label": "Lightweight status endpoint: returns solver metadata, DB record counts, and\u2026",
       "_origin": "ast",
       "community": 5,
@@ -2793,29 +2907,7 @@
       "file_type": "rationale",
       "norm_label": "lightweight status endpoint: returns solver metadata, db record counts, and...",
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L163"
-    },
-    {
-      "id": "backend_routers_blocks_rationale_211",
-      "label": "Save an AI-generated optimization result as a block record.",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "get_db",
-      "file_type": "rationale",
-      "norm_label": "save an ai-generated optimization result as a block record.",
-      "source_file": "backend/routers/blocks.py",
-      "source_location": "L211"
-    },
-    {
-      "id": "backend_routers_blocks_rationale_75",
-      "label": "Triggers Google OR-Tools CP-SAT Solver for a specified horizon and corridor.\u2026",
-      "_origin": "ast",
-      "community": 5,
-      "community_name": "get_db",
-      "file_type": "rationale",
-      "norm_label": "triggers google or-tools cp-sat solver for a specified horizon and corridor....",
-      "source_file": "backend/routers/blocks.py",
-      "source_location": "L75"
+      "source_location": "L212"
     },
     {
       "id": "backend_routers_maintenance_rationale_31",
@@ -2829,37 +2921,48 @@
       "source_location": "L31"
     },
     {
-      "id": "backend_routers_plans_rationale_12",
-      "label": "Returns the weekly maintenance plan with blocks and Mega-Block details.\u2026",
+      "id": "backend_seed_data_rationale_168",
+      "label": "Compute AI Risk Score using spec formula:\u2026",
       "_origin": "ast",
       "community": 5,
       "community_name": "get_db",
       "file_type": "rationale",
-      "norm_label": "returns the weekly maintenance plan with blocks and mega-block details....",
-      "source_file": "backend/routers/plans.py",
-      "source_location": "L12"
+      "norm_label": "compute ai risk score using spec formula:...",
+      "source_file": "backend/seed_data.py",
+      "source_location": "L168"
     },
     {
-      "id": "backend_routers_plans_rationale_149",
-      "label": "Returns the monthly maintenance plan (long-term overhaul horizon). Uses the OR-\u2026",
+      "id": "backend_seed_data_rationale_177",
+      "label": "Insert daily train slots into train_schedules and legacy trains table.",
       "_origin": "ast",
       "community": 5,
       "community_name": "get_db",
       "file_type": "rationale",
-      "norm_label": "returns the monthly maintenance plan (long-term overhaul horizon). uses the or-...",
-      "source_file": "backend/routers/plans.py",
-      "source_location": "L149"
+      "norm_label": "insert daily train slots into train_schedules and legacy trains table.",
+      "source_file": "backend/seed_data.py",
+      "source_location": "L177"
     },
     {
-      "id": "backend_routers_plans_rationale_84",
-      "label": "Returns all Mega-Block plans from the block_plans table. JSON fields\u2026",
+      "id": "backend_seed_data_rationale_207",
+      "label": "Insert multi-department defect logs into unified_defects and maintenance_tasks.",
       "_origin": "ast",
       "community": 5,
       "community_name": "get_db",
       "file_type": "rationale",
-      "norm_label": "returns all mega-block plans from the block_plans table. json fields...",
-      "source_file": "backend/routers/plans.py",
-      "source_location": "L84"
+      "norm_label": "insert multi-department defect logs into unified_defects and maintenance_tasks.",
+      "source_file": "backend/seed_data.py",
+      "source_location": "L207"
+    },
+    {
+      "id": "backend_seed_data_rationale_250",
+      "label": "Insert pre-computed Mega-Block plans from the seeded defects.",
+      "_origin": "ast",
+      "community": 5,
+      "community_name": "get_db",
+      "file_type": "rationale",
+      "norm_label": "insert pre-computed mega-block plans from the seeded defects.",
+      "source_file": "backend/seed_data.py",
+      "source_location": "L250"
     },
     {
       "id": "frontend_package",
@@ -3302,11 +3405,92 @@
       "source_location": "L25"
     },
     {
+      "id": "frontend_readme",
+      "label": "frontend/README.md",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "React + Vite",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "frontend/readme.md",
+      "source_file": "frontend/README.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "frontend_readme_expanding_the_oxlint_configuration",
+      "label": "Expanding the Oxlint configuration",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "React + Vite",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "expanding the oxlint configuration",
+      "source_file": "frontend/README.md",
+      "source_location": "L14"
+    },
+    {
+      "id": "frontend_readme_react_compiler",
+      "label": "React Compiler",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "React + Vite",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "react compiler",
+      "source_file": "frontend/README.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "frontend_readme_react_vite",
+      "label": "React + Vite",
+      "_origin": "ast",
+      "community": 8,
+      "community_name": "React + Vite",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "react + vite",
+      "source_file": "frontend/README.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "frontend_oxlintrc_plugins",
+      "label": "plugins",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "plugins",
+      "source_file": "frontend/.oxlintrc.json",
+      "source_location": "L3"
+    },
+    {
+      "id": "frontend_src_app",
+      "label": "App.jsx",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "app.jsx",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "frontend_src_components_layout",
+      "label": "Layout.jsx",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "layout.jsx",
+      "source_file": "frontend/src/components/Layout.jsx",
+      "source_location": "L1"
+    },
+    {
       "id": "frontend_src_components_sidebar",
       "label": "Sidebar.jsx",
       "_origin": "ast",
       "community": 9,
-      "community_name": "LoginPage.jsx",
+      "community_name": "App.jsx",
       "file_type": "code",
       "norm_label": "sidebar.jsx",
       "source_file": "frontend/src/components/Sidebar.jsx",
@@ -3317,18 +3501,117 @@
       "label": "navItems",
       "_origin": "ast",
       "community": 9,
-      "community_name": "LoginPage.jsx",
+      "community_name": "App.jsx",
       "file_type": "code",
       "norm_label": "navitems",
       "source_file": "frontend/src/components/Sidebar.jsx",
       "source_location": "L17"
     },
     {
+      "id": "frontend_src_components_topnav",
+      "label": "TopNav.jsx",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "topnav.jsx",
+      "source_file": "frontend/src/components/TopNav.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "frontend_src_components_topnav_pagetitles",
+      "label": "pageTitles",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "pagetitles",
+      "source_file": "frontend/src/components/TopNav.jsx",
+      "source_location": "L7"
+    },
+    {
+      "id": "frontend_src_context_themecontext",
+      "label": "ThemeContext.jsx",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "themecontext.jsx",
+      "source_file": "frontend/src/context/ThemeContext.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "frontend_src_context_themecontext_themecontext",
+      "label": "ThemeContext",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "themecontext",
+      "source_file": "frontend/src/context/ThemeContext.jsx",
+      "source_location": "L3"
+    },
+    {
+      "id": "frontend_src_main",
+      "label": "main.jsx",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "main.jsx",
+      "source_file": "frontend/src/main.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "frontend_src_pages_analyticspage",
+      "label": "AnalyticsPage.jsx",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "analyticspage.jsx",
+      "source_file": "frontend/src/pages/AnalyticsPage.jsx",
+      "source_location": "L1"
+    },
+    {
+      "id": "frontend_src_pages_analyticspage_dept_colors",
+      "label": "DEPT_COLORS",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "dept_colors",
+      "source_file": "frontend/src/pages/AnalyticsPage.jsx",
+      "source_location": "L21"
+    },
+    {
+      "id": "frontend_src_pages_analyticspage_pie_colors",
+      "label": "PIE_COLORS",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "pie_colors",
+      "source_file": "frontend/src/pages/AnalyticsPage.jsx",
+      "source_location": "L22"
+    },
+    {
+      "id": "frontend_src_pages_beforeafterpage",
+      "label": "BeforeAfterPage.jsx",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "App.jsx",
+      "file_type": "code",
+      "norm_label": "beforeafterpage.jsx",
+      "source_file": "frontend/src/pages/BeforeAfterPage.jsx",
+      "source_location": "L1"
+    },
+    {
       "id": "frontend_src_pages_loginpage",
       "label": "LoginPage.jsx",
       "_origin": "ast",
       "community": 9,
-      "community_name": "LoginPage.jsx",
+      "community_name": "App.jsx",
       "file_type": "code",
       "norm_label": "loginpage.jsx",
       "source_file": "frontend/src/pages/LoginPage.jsx",
@@ -3339,7 +3622,7 @@
       "label": "authStore.js",
       "_origin": "ast",
       "community": 9,
-      "community_name": "LoginPage.jsx",
+      "community_name": "App.jsx",
       "file_type": "code",
       "norm_label": "authstore.js",
       "source_file": "frontend/src/store/authStore.js",
@@ -3350,10 +3633,32 @@
       "label": "useAuthStore",
       "_origin": "ast",
       "community": 9,
-      "community_name": "LoginPage.jsx",
+      "community_name": "App.jsx",
       "file_type": "code",
       "norm_label": "useauthstore",
       "source_file": "frontend/src/store/authStore.js",
+      "source_location": "L3"
+    },
+    {
+      "id": "ref_oxc",
+      "label": "oxc",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "App.jsx",
+      "file_type": "concept",
+      "norm_label": "oxc",
+      "source_file": "frontend/.oxlintrc.json",
+      "source_location": "L3"
+    },
+    {
+      "id": "ref_react",
+      "label": "react",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "App.jsx",
+      "file_type": "concept",
+      "norm_label": "react",
+      "source_file": "frontend/.oxlintrc.json",
       "source_location": "L3"
     }
   ],
@@ -3743,6 +4048,18 @@
       "weight": 1.0
     },
     {
+      "source": "backend_routers_auth_session",
+      "target": "backend_database_get_db",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "backend/routers/auth.py",
+      "source_location": "L82",
+      "weight": 1.0
+    },
+    {
       "source": "backend_routers_auth_signup",
       "target": "backend_database_get_db",
       "relation": "calls",
@@ -3775,7 +4092,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L199",
+      "source_location": "L248",
       "weight": 1.0
     },
     {
@@ -3787,7 +4104,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L109",
+      "source_location": "L116",
       "weight": 1.0
     },
     {
@@ -3799,7 +4116,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L85",
+      "source_location": "L92",
       "weight": 1.0
     },
     {
@@ -3811,7 +4128,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L12",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
@@ -3823,7 +4140,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L36",
+      "source_location": "L43",
       "weight": 1.0
     },
     {
@@ -3835,7 +4152,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L59",
+      "source_location": "L66",
       "weight": 1.0
     },
     {
@@ -3847,7 +4164,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L167",
+      "source_location": "L216",
       "weight": 1.0
     },
     {
@@ -3859,7 +4176,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L131",
+      "source_location": "L138",
       "weight": 1.0
     },
     {
@@ -3871,7 +4188,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L149",
+      "source_location": "L173",
       "weight": 1.0
     },
     {
@@ -3883,7 +4200,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L212",
+      "source_location": "L261",
       "weight": 1.0
     },
     {
@@ -4188,7 +4505,7 @@
     },
     {
       "source": "frontend_src_pages_analyticspage_analyticspage",
-      "target": "frontend_src_api_client_getanalytics",
+      "target": "frontend_src_api_analytics_getanalytics",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4212,7 +4529,7 @@
     },
     {
       "source": "frontend_src_pages_beforeafterpage_beforeafterpage",
-      "target": "frontend_src_api_client_getanalytics",
+      "target": "frontend_src_api_analytics_getanalytics",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4231,55 +4548,55 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "frontend/src/pages/BlockPlannerPage.jsx",
-      "source_location": "L36",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
       "source": "frontend_src_pages_blockplannerpage_blockplannerpage",
-      "target": "frontend_src_api_client_getcorridors",
+      "target": "frontend_src_api_analytics_getcorridors",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "frontend/src/pages/BlockPlannerPage.jsx",
-      "source_location": "L57",
+      "source_location": "L47",
       "weight": 1.0
     },
     {
       "source": "frontend_src_pages_blockplannerpage_blockplannerpage",
-      "target": "frontend_src_api_client_getmaintenance",
+      "target": "frontend_src_api_maintenance_getmaintenance",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "frontend/src/pages/BlockPlannerPage.jsx",
-      "source_location": "L57",
+      "source_location": "L47",
       "weight": 1.0
     },
     {
       "source": "frontend_src_pages_blockplannerpage_blockplannerpage_handleoptimize",
-      "target": "frontend_src_api_client_optimizeblock",
+      "target": "frontend_src_api_blocks_optimizeblock",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "frontend/src/pages/BlockPlannerPage.jsx",
-      "source_location": "L83",
+      "source_location": "L73",
       "weight": 1.0
     },
     {
       "source": "frontend_src_pages_blockplannerpage_blockplannerpage_handlesave",
-      "target": "frontend_src_api_client_saveblock",
+      "target": "frontend_src_api_blocks_saveblock",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "frontend/src/pages/BlockPlannerPage.jsx",
-      "source_location": "L125",
+      "source_location": "L115",
       "weight": 1.0
     },
     {
@@ -4291,43 +4608,43 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "frontend/src/pages/DashboardPage.jsx",
-      "source_location": "L43",
+      "source_location": "L37",
       "weight": 1.0
     },
     {
       "source": "frontend_src_pages_dashboardpage_dashboardpage",
-      "target": "frontend_src_api_client_getanalytics",
+      "target": "frontend_src_api_analytics_getanalytics",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "frontend/src/pages/DashboardPage.jsx",
-      "source_location": "L50",
+      "source_location": "L44",
       "weight": 1.0
     },
     {
       "source": "frontend_src_pages_dashboardpage_dashboardpage",
-      "target": "frontend_src_api_client_getblocks",
+      "target": "frontend_src_api_blocks_getblocks",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "frontend/src/pages/DashboardPage.jsx",
-      "source_location": "L50",
+      "source_location": "L44",
       "weight": 1.0
     },
     {
       "source": "frontend_src_pages_dashboardpage_dashboardpage",
-      "target": "frontend_src_api_client_getmaintenance",
+      "target": "frontend_src_api_maintenance_getmaintenance",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "frontend/src/pages/DashboardPage.jsx",
-      "source_location": "L50",
+      "source_location": "L44",
       "weight": 1.0
     },
     {
@@ -4344,7 +4661,7 @@
     },
     {
       "source": "frontend_src_pages_loginpage_loginpage_handlesubmit",
-      "target": "frontend_src_api_client_login",
+      "target": "frontend_src_api_auth_login",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4356,7 +4673,7 @@
     },
     {
       "source": "frontend_src_pages_loginpage_loginpage_handlesubmit",
-      "target": "frontend_src_api_client_signup",
+      "target": "frontend_src_api_auth_signup",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -4368,14 +4685,14 @@
     },
     {
       "source": "frontend_src_pages_maintenancepage_maintenancepage_handlesave",
-      "target": "frontend_src_api_client_createmaintenance",
+      "target": "frontend_src_api_maintenance_createmaintenance",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "frontend/src/pages/MaintenancePage.jsx",
-      "source_location": "L135",
+      "source_location": "L136",
       "weight": 1.0
     },
     {
@@ -4387,31 +4704,31 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "frontend/src/pages/MaintenancePage.jsx",
-      "source_location": "L148",
+      "source_location": "L149",
       "weight": 1.0
     },
     {
       "source": "frontend_src_pages_maintenancepage_maintenancepage_load",
-      "target": "frontend_src_api_client_getcorridors",
+      "target": "frontend_src_api_analytics_getcorridors",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "frontend/src/pages/MaintenancePage.jsx",
-      "source_location": "L62",
+      "source_location": "L63",
       "weight": 1.0
     },
     {
       "source": "frontend_src_pages_maintenancepage_maintenancepage_load",
-      "target": "frontend_src_api_client_getmaintenance",
+      "target": "frontend_src_api_maintenance_getmaintenance",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "frontend/src/pages/MaintenancePage.jsx",
-      "source_location": "L62",
+      "source_location": "L63",
       "weight": 1.0
     },
     {
@@ -4423,7 +4740,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "frontend/src/pages/WeeklyPlanPage.jsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
@@ -4435,19 +4752,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "frontend/src/pages/WeeklyPlanPage.jsx",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
       "source": "frontend_src_pages_weeklyplanpage_weeklyplanpage",
-      "target": "frontend_src_api_client_getweeklyplan",
+      "target": "frontend_src_api_index_getweeklyplan",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "frontend/src/pages/WeeklyPlanPage.jsx",
-      "source_location": "L28",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -4459,7 +4776,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "frontend/src/pages/WeeklyPlanPage.jsx",
-      "source_location": "L46",
+      "source_location": "L47",
       "weight": 1.0
     },
     {
@@ -4471,7 +4788,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "frontend/src/pages/BlockPlannerPage.jsx",
-      "source_location": "L132",
+      "source_location": "L122",
       "weight": 1.0
     },
     {
@@ -4483,7 +4800,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "frontend/src/pages/MaintenancePage.jsx",
-      "source_location": "L59",
+      "source_location": "L60",
       "weight": 1.0
     },
     {
@@ -4495,7 +4812,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "frontend/src/pages/MaintenancePage.jsx",
-      "source_location": "L87",
+      "source_location": "L88",
       "weight": 1.0
     },
     {
@@ -4507,7 +4824,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "frontend/src/pages/MaintenancePage.jsx",
-      "source_location": "L95",
+      "source_location": "L96",
       "weight": 1.0
     },
     {
@@ -4519,7 +4836,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "frontend/src/pages/WeeklyPlanPage.jsx",
-      "source_location": "L43",
+      "source_location": "L44",
       "weight": 1.0
     },
     {
@@ -4643,6 +4960,18 @@
       "weight": 1.0
     },
     {
+      "source": "backend_routers_auth_session",
+      "target": "backend_routers_auth_py_get",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "decorator",
+      "source_file": "backend/routers/auth.py",
+      "source_location": "L71",
+      "weight": 1.0
+    },
+    {
       "source": "backend_routers_auth_signup",
       "target": "backend_routers_auth_py_post",
       "relation": "references",
@@ -4663,7 +4992,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L197",
+      "source_location": "L246",
       "weight": 1.0
     },
     {
@@ -4675,7 +5004,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L73",
+      "source_location": "L80",
       "weight": 1.0
     },
     {
@@ -4687,7 +5016,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L10",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -4699,7 +5028,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L34",
+      "source_location": "L41",
       "weight": 1.0
     },
     {
@@ -4711,7 +5040,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L161",
+      "source_location": "L210",
       "weight": 1.0
     },
     {
@@ -4723,7 +5052,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L123",
+      "source_location": "L130",
       "weight": 1.0
     },
     {
@@ -4735,7 +5064,7 @@
       "confidence_score": 1.0,
       "context": "decorator",
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L209",
+      "source_location": "L258",
       "weight": 1.0
     },
     {
@@ -4808,6 +5137,78 @@
       "context": "decorator",
       "source_file": "backend/routers/plans.py",
       "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_client",
+      "target": "frontend_src_api_index",
+      "relation": "re_exports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "export",
+      "source_file": "frontend/src/api/client.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_index",
+      "target": "frontend_src_api_auth",
+      "relation": "re_exports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "export",
+      "source_file": "frontend/src/api/index.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_index",
+      "target": "frontend_src_api_http",
+      "relation": "re_exports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "export",
+      "source_file": "frontend/src/api/index.js",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_index",
+      "target": "frontend_src_api_blocks",
+      "relation": "re_exports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "export",
+      "source_file": "frontend/src/api/index.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_index",
+      "target": "frontend_src_api_maintenance",
+      "relation": "re_exports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "export",
+      "source_file": "frontend/src/api/index.js",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_index",
+      "target": "frontend_src_api_analytics",
+      "relation": "re_exports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "export",
+      "source_file": "frontend/src/api/index.js",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -5160,6 +5561,42 @@
     },
     {
       "source": "backend_routers_blocks",
+      "target": "backend_optimizer_optimize_blocks",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/routers/blocks.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_routers_blocks",
+      "target": "backend_optimizer_solve_block_schedule",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/routers/blocks.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_routers_blocks",
+      "target": "backend_optimizer_solve_reschedule",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/routers/blocks.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_routers_blocks",
       "target": "backend_database_get_db",
       "relation": "imports",
       "_origin": "ast",
@@ -5168,6 +5605,30 @@
       "context": "import",
       "source_file": "backend/routers/blocks.py",
       "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_routers_blocks",
+      "target": "backend_models_blockrecommendation",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/routers/blocks.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_routers_blocks",
+      "target": "backend_models_megablocksresponse",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/routers/blocks.py",
+      "source_location": "L3",
       "weight": 1.0
     },
     {
@@ -5196,7 +5657,7 @@
     },
     {
       "source": "backend_routers_blocks",
-      "target": "backend_models_reschedulerequest",
+      "target": "backend_models_optimizerplanresponse",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5208,38 +5669,14 @@
     },
     {
       "source": "backend_routers_blocks",
-      "target": "backend_optimizer_optimize_blocks",
+      "target": "backend_models_reschedulerequest",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L4",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_routers_blocks",
-      "target": "backend_optimizer_solve_block_schedule",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "backend/routers/blocks.py",
-      "source_location": "L4",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_routers_blocks",
-      "target": "backend_optimizer_solve_reschedule",
-      "relation": "imports",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "backend/routers/blocks.py",
-      "source_location": "L4",
+      "source_location": "L3",
       "weight": 1.0
     },
     {
@@ -5783,6 +6220,66 @@
       "weight": 1.0
     },
     {
+      "source": "frontend_src_api_analytics",
+      "target": "frontend_src_api_http_api",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "frontend/src/api/analytics.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_auth",
+      "target": "frontend_src_api_http_api",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "frontend/src/api/auth.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_blocks",
+      "target": "frontend_src_api_http_api",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "frontend/src/api/blocks.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_index",
+      "target": "frontend_src_api_http_api",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "frontend/src/api/index.js",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_maintenance",
+      "target": "frontend_src_api_http_api",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "frontend/src/api/maintenance.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "frontend_src_app",
       "target": "frontend_src_pages_analyticspage_analyticspage",
       "relation": "imports",
@@ -5792,6 +6289,18 @@
       "context": "import",
       "source_file": "frontend/src/App.jsx",
       "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_app",
+      "target": "frontend_src_context_themecontext_themeprovider",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L11",
       "weight": 1.0
     },
     {
@@ -5903,14 +6412,26 @@
       "weight": 1.0
     },
     {
-      "source": "frontend_src_components_layout",
-      "target": "frontend_src_context_themecontext_themeprovider",
+      "source": "frontend_src_components_sidebar",
+      "target": "frontend_src_store_authstore_useauthstore",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "context": "import",
-      "source_file": "frontend/src/components/Layout.jsx",
+      "source_file": "frontend/src/components/Sidebar.jsx",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_components_topnav",
+      "target": "frontend_src_store_authstore_useauthstore",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "frontend/src/components/TopNav.jsx",
       "source_location": "L4",
       "weight": 1.0
     },
@@ -5940,7 +6461,7 @@
     },
     {
       "source": "frontend_src_pages_analyticspage",
-      "target": "frontend_src_api_client_getanalytics",
+      "target": "frontend_src_api_analytics_getanalytics",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5964,7 +6485,7 @@
     },
     {
       "source": "frontend_src_pages_beforeafterpage",
-      "target": "frontend_src_api_client_getanalytics",
+      "target": "frontend_src_api_analytics_getanalytics",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -5988,7 +6509,7 @@
     },
     {
       "source": "frontend_src_pages_blockplannerpage",
-      "target": "frontend_src_api_client_getcorridors",
+      "target": "frontend_src_api_analytics_getcorridors",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6000,7 +6521,7 @@
     },
     {
       "source": "frontend_src_pages_blockplannerpage",
-      "target": "frontend_src_api_client_getmaintenance",
+      "target": "frontend_src_api_blocks_optimizeblock",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6012,7 +6533,7 @@
     },
     {
       "source": "frontend_src_pages_blockplannerpage",
-      "target": "frontend_src_api_client_optimizeblock",
+      "target": "frontend_src_api_blocks_saveblock",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6024,7 +6545,7 @@
     },
     {
       "source": "frontend_src_pages_blockplannerpage",
-      "target": "frontend_src_api_client_saveblock",
+      "target": "frontend_src_api_maintenance_getmaintenance",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6059,8 +6580,32 @@
       "weight": 1.0
     },
     {
+      "source": "frontend_src_pages_blockplannerpage",
+      "target": "frontend_src_constants_colors_dept_badge_style",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "frontend/src/pages/BlockPlannerPage.jsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_pages_blockplannerpage",
+      "target": "frontend_src_constants_colors_dept_colors",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "frontend/src/pages/BlockPlannerPage.jsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "frontend_src_pages_dashboardpage",
-      "target": "frontend_src_api_client_getanalytics",
+      "target": "frontend_src_api_analytics_getanalytics",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6072,7 +6617,7 @@
     },
     {
       "source": "frontend_src_pages_dashboardpage",
-      "target": "frontend_src_api_client_getblocks",
+      "target": "frontend_src_api_blocks_getblocks",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6084,7 +6629,7 @@
     },
     {
       "source": "frontend_src_pages_dashboardpage",
-      "target": "frontend_src_api_client_getmaintenance",
+      "target": "frontend_src_api_maintenance_getmaintenance",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6131,6 +6676,18 @@
       "weight": 1.0
     },
     {
+      "source": "frontend_src_pages_dashboardpage",
+      "target": "frontend_src_constants_colors_dept_colors",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "frontend/src/pages/DashboardPage.jsx",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
       "source": "frontend_src_pages_loginpage",
       "target": "frontend_src_store_authstore_useauthstore",
       "relation": "imports",
@@ -6144,7 +6701,7 @@
     },
     {
       "source": "frontend_src_pages_loginpage",
-      "target": "frontend_src_api_client_login",
+      "target": "frontend_src_api_auth_login",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6156,7 +6713,7 @@
     },
     {
       "source": "frontend_src_pages_loginpage",
-      "target": "frontend_src_api_client_signup",
+      "target": "frontend_src_api_auth_signup",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6168,7 +6725,7 @@
     },
     {
       "source": "frontend_src_pages_maintenancepage",
-      "target": "frontend_src_api_client_createmaintenance",
+      "target": "frontend_src_api_analytics_getcorridors",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6180,7 +6737,7 @@
     },
     {
       "source": "frontend_src_pages_maintenancepage",
-      "target": "frontend_src_api_client_getcorridors",
+      "target": "frontend_src_api_maintenance_createmaintenance",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6192,7 +6749,7 @@
     },
     {
       "source": "frontend_src_pages_maintenancepage",
-      "target": "frontend_src_api_client_getmaintenance",
+      "target": "frontend_src_api_maintenance_getmaintenance",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6215,8 +6772,20 @@
       "weight": 1.0
     },
     {
+      "source": "frontend_src_pages_maintenancepage",
+      "target": "frontend_src_constants_colors_dept_colors",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "frontend/src/pages/MaintenancePage.jsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
       "source": "frontend_src_pages_weeklyplanpage",
-      "target": "frontend_src_api_client_getweeklyplan",
+      "target": "frontend_src_api_index_getweeklyplan",
       "relation": "imports",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -6236,6 +6805,18 @@
       "context": "import",
       "source_file": "frontend/src/pages/WeeklyPlanPage.jsx",
       "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_pages_weeklyplanpage",
+      "target": "frontend_src_constants_colors_dept_colors",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "frontend/src/pages/WeeklyPlanPage.jsx",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -6528,6 +7109,18 @@
     },
     {
       "source": "backend_routers_blocks",
+      "target": "backend_optimizer",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "backend/routers/blocks.py",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_routers_blocks",
       "target": "backend_database",
       "relation": "imports_from",
       "_origin": "ast",
@@ -6548,18 +7141,6 @@
       "context": "import",
       "source_file": "backend/routers/blocks.py",
       "source_location": "L3",
-      "weight": 1.0
-    },
-    {
-      "source": "backend_routers_blocks",
-      "target": "backend_optimizer",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "backend/routers/blocks.py",
-      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -6719,6 +7300,54 @@
       "weight": 1.0
     },
     {
+      "source": "frontend_src_api_analytics",
+      "target": "frontend_src_api_http",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "frontend/src/api/analytics.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_auth",
+      "target": "frontend_src_api_http",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "frontend/src/api/auth.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_blocks",
+      "target": "frontend_src_api_http",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "frontend/src/api/blocks.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_maintenance",
+      "target": "frontend_src_api_http",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "frontend/src/api/maintenance.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "frontend_src_app",
       "target": "frontend_src_pages_analyticspage",
       "relation": "imports_from",
@@ -6728,6 +7357,18 @@
       "context": "import",
       "source_file": "frontend/src/App.jsx",
       "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_app",
+      "target": "frontend_src_context_themecontext",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "frontend/src/App.jsx",
+      "source_location": "L11",
       "weight": 1.0
     },
     {
@@ -6836,18 +7477,6 @@
       "context": "import",
       "source_file": "frontend/src/components/Layout.jsx",
       "source_location": "L2",
-      "weight": 1.0
-    },
-    {
-      "source": "frontend_src_components_layout",
-      "target": "frontend_src_context_themecontext",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "frontend/src/components/Layout.jsx",
-      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -7055,6 +7684,18 @@
       "weight": 1.0
     },
     {
+      "source": "frontend_src_pages_blockplannerpage",
+      "target": "frontend_src_constants_colors",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "frontend/src/pages/BlockPlannerPage.jsx",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "frontend_src_pages_dashboardpage",
       "target": "ref_react",
       "relation": "imports_from",
@@ -7112,6 +7753,18 @@
       "context": "import",
       "source_file": "frontend/src/pages/DashboardPage.jsx",
       "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_pages_dashboardpage",
+      "target": "frontend_src_constants_colors",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "frontend/src/pages/DashboardPage.jsx",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -7187,6 +7840,18 @@
       "weight": 1.0
     },
     {
+      "source": "frontend_src_pages_maintenancepage",
+      "target": "frontend_src_constants_colors",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "frontend/src/pages/MaintenancePage.jsx",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
       "source": "frontend_src_pages_weeklyplanpage",
       "target": "ref_react",
       "relation": "imports_from",
@@ -7220,6 +7885,18 @@
       "context": "import",
       "source_file": "frontend/src/pages/WeeklyPlanPage.jsx",
       "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_pages_weeklyplanpage",
+      "target": "frontend_src_constants_colors",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "frontend/src/pages/WeeklyPlanPage.jsx",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -7407,7 +8084,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/models.py",
-      "source_location": "L183",
+      "source_location": "L191",
       "weight": 1.0
     },
     {
@@ -7429,7 +8106,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/models.py",
-      "source_location": "L201",
+      "source_location": "L209",
       "weight": 1.0
     },
     {
@@ -7730,14 +8407,14 @@
       "weight": 1.0
     },
     {
-      "source": "backend_routers_blocks",
-      "target": "backend_routers_blocks_get_blocks",
+      "source": "backend_routers_auth",
+      "target": "backend_routers_auth_session",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "backend/routers/blocks.py",
-      "source_location": "L11",
+      "source_file": "backend/routers/auth.py",
+      "source_location": "L72",
       "weight": 1.0
     },
     {
@@ -7748,7 +8425,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L124",
+      "source_location": "L131",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_routers_blocks",
+      "target": "backend_routers_blocks_get_blocks",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/routers/blocks.py",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -7759,7 +8447,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L162",
+      "source_location": "L211",
       "weight": 1.0
     },
     {
@@ -7770,7 +8458,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L198",
+      "source_location": "L247",
       "weight": 1.0
     },
     {
@@ -7781,7 +8469,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L210",
+      "source_location": "L259",
       "weight": 1.0
     },
     {
@@ -7792,7 +8480,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L35",
+      "source_location": "L42",
       "weight": 1.0
     },
     {
@@ -7803,7 +8491,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L74",
+      "source_location": "L81",
       "weight": 1.0
     },
     {
@@ -8324,157 +9012,223 @@
       "weight": 1.0
     },
     {
-      "source": "frontend_src_api_client",
-      "target": "frontend_src_api_client_login",
+      "source": "frontend_readme",
+      "target": "frontend_readme_react_vite",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "frontend/src/api/client.js",
-      "source_location": "L17",
+      "source_file": "frontend/README.md",
+      "source_location": "L1",
       "weight": 1.0
     },
     {
-      "source": "frontend_src_api_client",
-      "target": "frontend_src_api_client_signup",
+      "source": "frontend_readme_react_vite",
+      "target": "frontend_readme_react_compiler",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "frontend/src/api/client.js",
-      "source_location": "L20",
+      "source_file": "frontend/README.md",
+      "source_location": "L10",
       "weight": 1.0
     },
     {
-      "source": "frontend_src_api_client",
-      "target": "frontend_src_api_client_getmaintenance",
+      "source": "frontend_readme_react_vite",
+      "target": "frontend_readme_expanding_the_oxlint_configuration",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "frontend/src/api/client.js",
-      "source_location": "L24",
+      "source_file": "frontend/README.md",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
-      "source": "frontend_src_api_client",
-      "target": "frontend_src_api_client_createmaintenance",
+      "source": "frontend_src_api_analytics",
+      "target": "frontend_src_api_analytics_getanalytics",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "frontend/src/api/client.js",
-      "source_location": "L25",
-      "weight": 1.0
-    },
-    {
-      "source": "frontend_src_api_client",
-      "target": "frontend_src_api_client_getassets",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "frontend/src/api/client.js",
-      "source_location": "L28",
-      "weight": 1.0
-    },
-    {
-      "source": "frontend_src_api_client",
-      "target": "frontend_src_api_client_gettrains",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "frontend/src/api/client.js",
-      "source_location": "L29",
-      "weight": 1.0
-    },
-    {
-      "source": "frontend_src_api_client",
-      "target": "frontend_src_api_client_api",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "frontend/src/api/client.js",
+      "source_file": "frontend/src/api/analytics.js",
       "source_location": "L3",
       "weight": 1.0
     },
     {
-      "source": "frontend_src_api_client",
-      "target": "frontend_src_api_client_getcorridors",
+      "source": "frontend_src_api_analytics",
+      "target": "frontend_src_api_analytics_getcorridors",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "frontend/src/api/client.js",
-      "source_location": "L30",
+      "source_file": "frontend/src/api/analytics.js",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
-      "source": "frontend_src_api_client",
-      "target": "frontend_src_api_client_getblocks",
+      "source": "frontend_src_api_auth",
+      "target": "frontend_src_api_auth_login",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "frontend/src/api/client.js",
-      "source_location": "L33",
+      "source_file": "frontend/src/api/auth.js",
+      "source_location": "L3",
       "weight": 1.0
     },
     {
-      "source": "frontend_src_api_client",
-      "target": "frontend_src_api_client_optimizeblock",
+      "source": "frontend_src_api_auth",
+      "target": "frontend_src_api_auth_signup",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "frontend/src/api/client.js",
-      "source_location": "L34",
+      "source_file": "frontend/src/api/auth.js",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
-      "source": "frontend_src_api_client",
-      "target": "frontend_src_api_client_saveblock",
+      "source": "frontend_src_api_auth",
+      "target": "frontend_src_api_auth_getsession",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "frontend/src/api/client.js",
-      "source_location": "L35",
+      "source_file": "frontend/src/api/auth.js",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
-      "source": "frontend_src_api_client",
-      "target": "frontend_src_api_client_approveblock",
+      "source": "frontend_src_api_blocks",
+      "target": "frontend_src_api_blocks_getblocks",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "frontend/src/api/client.js",
-      "source_location": "L36",
+      "source_file": "frontend/src/api/blocks.js",
+      "source_location": "L3",
       "weight": 1.0
     },
     {
-      "source": "frontend_src_api_client",
-      "target": "frontend_src_api_client_getweeklyplan",
+      "source": "frontend_src_api_blocks",
+      "target": "frontend_src_api_blocks_optimizeblock",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "frontend/src/api/client.js",
-      "source_location": "L39",
+      "source_file": "frontend/src/api/blocks.js",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
-      "source": "frontend_src_api_client",
-      "target": "frontend_src_api_client_getanalytics",
+      "source": "frontend_src_api_blocks",
+      "target": "frontend_src_api_blocks_saveblock",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "frontend/src/api/client.js",
-      "source_location": "L43",
+      "source_file": "frontend/src/api/blocks.js",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_blocks",
+      "target": "frontend_src_api_blocks_approveblock",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/api/blocks.js",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_blocks",
+      "target": "frontend_src_api_blocks_reschedule",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/api/blocks.js",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_http",
+      "target": "frontend_src_api_http_api",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/api/http.js",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_index",
+      "target": "frontend_src_api_index_getweeklyplan",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/api/index.js",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_maintenance",
+      "target": "frontend_src_api_maintenance_getmaintenance",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/api/maintenance.js",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_maintenance",
+      "target": "frontend_src_api_maintenance_createmaintenance",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/api/maintenance.js",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_maintenance",
+      "target": "frontend_src_api_maintenance_getunifieddefects",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/api/maintenance.js",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_maintenance",
+      "target": "frontend_src_api_maintenance_getassets",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/api/maintenance.js",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_api_maintenance",
+      "target": "frontend_src_api_maintenance_gettrains",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/api/maintenance.js",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -8485,7 +9239,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/src/App.jsx",
-      "source_location": "L14",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -8507,7 +9261,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/src/components/Layout.jsx",
-      "source_location": "L6",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -8599,6 +9353,28 @@
       "weight": 1.0
     },
     {
+      "source": "frontend_src_constants_colors",
+      "target": "frontend_src_constants_colors_dept_colors",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/constants/colors.js",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_constants_colors",
+      "target": "frontend_src_constants_colors_dept_badge_style",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/constants/colors.js",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
       "source": "frontend_src_context_themecontext",
       "target": "frontend_src_context_themecontext_themecontext",
       "relation": "contains",
@@ -8677,35 +9453,13 @@
     },
     {
       "source": "frontend_src_pages_blockplannerpage",
-      "target": "frontend_src_pages_blockplannerpage_dept_badge_style",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "frontend/src/pages/BlockPlannerPage.jsx",
-      "source_location": "L22",
-      "weight": 1.0
-    },
-    {
-      "source": "frontend_src_pages_blockplannerpage",
-      "target": "frontend_src_pages_blockplannerpage_dept_bar_color",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "frontend/src/pages/BlockPlannerPage.jsx",
-      "source_location": "L28",
-      "weight": 1.0
-    },
-    {
-      "source": "frontend_src_pages_blockplannerpage",
       "target": "frontend_src_pages_blockplannerpage_blockplannerpage",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/src/pages/BlockPlannerPage.jsx",
-      "source_location": "L35",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -8716,7 +9470,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/src/pages/BlockPlannerPage.jsx",
-      "source_location": "L122",
+      "source_location": "L112",
       "weight": 1.0
     },
     {
@@ -8727,7 +9481,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/src/pages/BlockPlannerPage.jsx",
-      "source_location": "L139",
+      "source_location": "L129",
       "weight": 1.0
     },
     {
@@ -8738,7 +9492,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/src/pages/BlockPlannerPage.jsx",
-      "source_location": "L152",
+      "source_location": "L142",
       "weight": 1.0
     },
     {
@@ -8749,29 +9503,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/src/pages/BlockPlannerPage.jsx",
-      "source_location": "L77",
-      "weight": 1.0
-    },
-    {
-      "source": "frontend_src_pages_dashboardpage",
-      "target": "frontend_src_pages_dashboardpage_dept_colors",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "frontend/src/pages/DashboardPage.jsx",
-      "source_location": "L35",
-      "weight": 1.0
-    },
-    {
-      "source": "frontend_src_pages_dashboardpage",
-      "target": "frontend_src_pages_dashboardpage_loadingskeleton",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "frontend/src/pages/DashboardPage.jsx",
-      "source_location": "L383",
+      "source_location": "L67",
       "weight": 1.0
     },
     {
@@ -8782,7 +9514,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/src/pages/DashboardPage.jsx",
-      "source_location": "L42",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_pages_dashboardpage",
+      "target": "frontend_src_pages_dashboardpage_loadingskeleton",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/pages/DashboardPage.jsx",
+      "source_location": "L377",
       "weight": 1.0
     },
     {
@@ -8815,7 +9558,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/src/pages/MaintenancePage.jsx",
-      "source_location": "L18",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
@@ -8826,29 +9569,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/src/pages/MaintenancePage.jsx",
-      "source_location": "L25",
-      "weight": 1.0
-    },
-    {
-      "source": "frontend_src_pages_maintenancepage_maintenancepage",
-      "target": "frontend_src_pages_maintenancepage_maintenancepage_handlemergetasks",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "frontend/src/pages/MaintenancePage.jsx",
-      "source_location": "L108",
-      "weight": 1.0
-    },
-    {
-      "source": "frontend_src_pages_maintenancepage_maintenancepage",
-      "target": "frontend_src_pages_maintenancepage_maintenancepage_handlesave",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "frontend/src/pages/MaintenancePage.jsx",
-      "source_location": "L131",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -8859,51 +9580,29 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/src/pages/MaintenancePage.jsx",
-      "source_location": "L99",
+      "source_location": "L100",
       "weight": 1.0
     },
     {
-      "source": "frontend_src_pages_weeklyplanpage",
-      "target": "frontend_src_pages_weeklyplanpage_fmt",
+      "source": "frontend_src_pages_maintenancepage_maintenancepage",
+      "target": "frontend_src_pages_maintenancepage_maintenancepage_handlemergetasks",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "frontend/src/pages/WeeklyPlanPage.jsx",
-      "source_location": "L17",
+      "source_file": "frontend/src/pages/MaintenancePage.jsx",
+      "source_location": "L109",
       "weight": 1.0
     },
     {
-      "source": "frontend_src_pages_weeklyplanpage",
-      "target": "frontend_src_pages_weeklyplanpage_weeklyplanpage",
+      "source": "frontend_src_pages_maintenancepage_maintenancepage",
+      "target": "frontend_src_pages_maintenancepage_maintenancepage_handlesave",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "frontend/src/pages/WeeklyPlanPage.jsx",
-      "source_location": "L21",
-      "weight": 1.0
-    },
-    {
-      "source": "frontend_src_pages_weeklyplanpage",
-      "target": "frontend_src_pages_weeklyplanpage_days",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "frontend/src/pages/WeeklyPlanPage.jsx",
-      "source_location": "L6",
-      "weight": 1.0
-    },
-    {
-      "source": "frontend_src_pages_weeklyplanpage",
-      "target": "frontend_src_pages_weeklyplanpage_day_short",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "frontend/src/pages/WeeklyPlanPage.jsx",
-      "source_location": "L7",
+      "source_file": "frontend/src/pages/MaintenancePage.jsx",
+      "source_location": "L132",
       "weight": 1.0
     },
     {
@@ -8914,7 +9613,51 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "frontend/src/pages/WeeklyPlanPage.jsx",
-      "source_location": "L9",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_pages_weeklyplanpage",
+      "target": "frontend_src_pages_weeklyplanpage_fmt",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/pages/WeeklyPlanPage.jsx",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_pages_weeklyplanpage",
+      "target": "frontend_src_pages_weeklyplanpage_weeklyplanpage",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/pages/WeeklyPlanPage.jsx",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_pages_weeklyplanpage",
+      "target": "frontend_src_pages_weeklyplanpage_days",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/pages/WeeklyPlanPage.jsx",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "frontend_src_pages_weeklyplanpage",
+      "target": "frontend_src_pages_weeklyplanpage_day_short",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "frontend/src/pages/WeeklyPlanPage.jsx",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -9237,6 +9980,105 @@
       "weight": 1.0
     },
     {
+      "source": "readme",
+      "target": "readme_railopt_automatic_railway_block_planning_system",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_installation_setup_instructions",
+      "target": "readme_1_backend_setup_fastapi_google_or_tools",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_installation_setup_instructions",
+      "target": "readme_2_frontend_setup_react_vite_tailwind_css",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_railopt_automatic_railway_block_planning_system",
+      "target": "readme_prerequisites",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_railopt_automatic_railway_block_planning_system",
+      "target": "readme_installation_setup_instructions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_railopt_automatic_railway_block_planning_system",
+      "target": "readme_demo_officer_login_credentials",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_railopt_automatic_railway_block_planning_system",
+      "target": "readme_architecture_features",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_railopt_automatic_railway_block_planning_system",
+      "target": "readme_active_server_status",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_railopt_automatic_railway_block_planning_system",
+      "target": "readme_primary_api_endpoints",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L90",
+      "weight": 1.0
+    },
+    {
       "source": "backend_models_authresponse",
       "target": "basemodel",
       "relation": "inherits",
@@ -9266,7 +10108,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/models.py",
-      "source_location": "L183",
+      "source_location": "L191",
       "weight": 1.0
     },
     {
@@ -9343,7 +10185,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/models.py",
-      "source_location": "L201",
+      "source_location": "L209",
       "weight": 1.0
     },
     {
@@ -9410,6 +10252,17 @@
       "confidence_score": 1.0,
       "source_file": "backend/models.py",
       "source_location": "L97",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_models_reschedulerequest",
+      "target": "backend_models_reschedulerequest_delay_mins",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/models.py",
+      "source_location": "L187",
       "weight": 1.0
     },
     {
@@ -9644,47 +10497,58 @@
       "weight": 1.0
     },
     {
-      "source": "backend_routers_blocks_rationale_125",
+      "source": "backend_routers_auth_rationale_73",
+      "target": "backend_routers_auth_session",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/routers/auth.py",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "backend_routers_blocks_rationale_132",
       "target": "backend_routers_blocks_reschedule",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L125",
+      "source_location": "L132",
       "weight": 1.0
     },
     {
-      "source": "backend_routers_blocks_rationale_163",
+      "source": "backend_routers_blocks_rationale_212",
       "target": "backend_routers_blocks_optimizer_status",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L163",
+      "source_location": "L212",
       "weight": 1.0
     },
     {
-      "source": "backend_routers_blocks_rationale_211",
+      "source": "backend_routers_blocks_rationale_260",
       "target": "backend_routers_blocks_save_block",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L211",
+      "source_location": "L260",
       "weight": 1.0
     },
     {
-      "source": "backend_routers_blocks_rationale_75",
+      "source": "backend_routers_blocks_rationale_82",
       "target": "backend_routers_blocks_generate_plan",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L75",
+      "source_location": "L82",
       "weight": 1.0
     },
     {
@@ -9831,7 +10695,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L74",
+      "source_location": "L81",
       "weight": 0.8
     },
     {
@@ -9843,7 +10707,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L35",
+      "source_location": "L42",
       "weight": 0.8
     },
     {
@@ -9855,7 +10719,7 @@
       "confidence_score": 0.95,
       "context": "parameter_type",
       "source_file": "backend/routers/blocks.py",
-      "source_location": "L124",
+      "source_location": "L131",
       "weight": 0.8
     },
     {
@@ -9893,6 +10757,28 @@
       "weight": 0.8
     },
     {
+      "source": "backend_routers_auth_session",
+      "target": "backend_models_authresponse",
+      "relation": "uses",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "backend/routers/auth.py",
+      "source_location": "L87",
+      "weight": 0.8
+    },
+    {
+      "source": "backend_routers_auth_session",
+      "target": "backend_models_userout",
+      "relation": "uses",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.95,
+      "source_file": "backend/routers/auth.py",
+      "source_location": "L90",
+      "weight": 0.8
+    },
+    {
       "source": "backend_routers_auth_signup",
       "target": "backend_models_userout",
       "relation": "uses",
@@ -9916,5 +10802,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "1780c0aa793d009baf6572ddd1b4f4a20b802199"
+  "built_at_commit": "325658be816308241ccd0c64b216973216909c8c"
 }

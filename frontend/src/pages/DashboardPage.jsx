@@ -3,6 +3,7 @@ import { getMaintenance, getBlocks, getAnalytics } from '../api/client'
 import KPICard from '../components/KPICard'
 import StatusBadge from '../components/StatusBadge'
 import { useTheme } from '../context/ThemeContext'
+import { DEPT_COLORS } from '../constants/colors'
 import {
   AlertTriangle,
   Clock,
@@ -31,13 +32,6 @@ import {
   Pie,
   Cell,
 } from 'recharts'
-
-const DEPT_COLORS = {
-  Engineering: '#ef4444',
-  'S&T': '#f59e0b',
-  Traction: '#3b82f6',
-  'Mega-Block': '#10b981',
-}
 
 export default function DashboardPage() {
   const { theme } = useTheme()

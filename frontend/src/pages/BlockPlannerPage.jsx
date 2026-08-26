@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { getMaintenance, getCorridors, optimizeBlock, saveBlock } from '../api/client'
 import StatusBadge from '../components/StatusBadge'
 import { useTheme } from '../context/ThemeContext'
+import { DEPT_BADGE_STYLE, DEPT_COLORS } from '../constants/colors'
 import {
   Brain,
   Loader2,
@@ -19,18 +20,7 @@ import {
   Plus,
 } from 'lucide-react'
 
-const DEPT_BADGE_STYLE = {
-  Engineering: 'bg-red-100 text-red-800 border-red-300 dark:bg-red-950/60 dark:text-red-300 dark:border-red-800',
-  'S&T': 'bg-amber-100 text-amber-800 border-amber-300 dark:bg-amber-950/60 dark:text-amber-300 dark:border-amber-800',
-  Traction: 'bg-blue-100 text-blue-800 border-blue-300 dark:bg-blue-950/60 dark:text-blue-300 dark:border-blue-800',
-}
-
-const DEPT_BAR_COLOR = {
-  Engineering: '#ef4444',
-  'S&T': '#f59e0b',
-  Traction: '#3b82f6',
-  'Mega-Block': '#10b981',
-}
+const DEPT_BAR_COLOR = DEPT_COLORS
 
 export default function BlockPlannerPage() {
   const { theme } = useTheme()

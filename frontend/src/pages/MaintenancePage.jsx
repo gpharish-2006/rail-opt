@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { getMaintenance, getCorridors, createMaintenance } from '../api/client'
 import StatusBadge from '../components/StatusBadge'
+import { DEPT_COLORS } from '../constants/colors'
 import {
   Plus,
   Search,
@@ -319,7 +320,9 @@ export default function MaintenancePage() {
                       </td>
 
                       <td className="p-3">
-                        <StatusBadge status={t.department} />
+                        <span style={{ color: DEPT_COLORS[t.department] }}>
+                          <StatusBadge status={t.department} />
+                        </span>
                       </td>
 
                       <td className="p-3 font-semibold text-slate-700 dark:text-slate-300">{t.corridor_code || '—'}</td>
