@@ -1,26 +1,51 @@
 from fastapi import APIRouter, HTTPException
 from database import get_db
 from models import MaintenanceTaskCreate
-from optimizer import calculate_ai_risk_score
+from optimizer import calculate_ai_risk_score, calculate_task_duration_adjusted
 
 router = APIRouter(prefix="/api/maintenance", tags=["maintenance"])
 
+# Valid sort_by columns whitelist (prevents SQL injection)
+_VALID_SORT_COLS = {
+    "ai_risk_score", "overdue_days", "criticality",
+    "urgency", "safety_risk", "required_duration_mins", "created_at",
+}
+
 
 def _compute_priority(criticality, urgency, safety_risk, overdue_days, train_impact, speed_impact_kmh=0, weather_risk=0):
-    ov = min(10.0, (overdue_days / 6.0) * 10.0)
+    ov  = min(10.0, (overdue_days    / 6.0)  * 10.0)
     spd = min(10.0, (speed_impact_kmh / 30.0) * 10.0)
-    raw = (0.35 * criticality + 0.25 * urgency + 0.20 * safety_risk + 0.10 * ov + 0.10 * spd - 0.05 * weather_risk)
+    raw = (0.35 * criticality + 0.25 * urgency + 0.20 * safety_risk
+           + 0.10 * ov + 0.10 * spd - 0.05 * weather_risk)
     return round(min(100.0, max(0.0, raw * 10.0)), 1)
 
 
 @router.get("/unified-defects")
-def get_unified_defects(department: str = None, corridor_id: int = None, min_risk_score: float = None):
+def get_unified_defects(
+    department: str = None,
+    corridor_id: int = None,
+    min_risk_score: float = None,
+    status: str = None,
+    sort_by: str = "ai_risk_score",
+):
     """
-    Unified Defect Ingest endpoint returning aggregated defects across TMS, SMMS, and TDMS
-    with Layer 1 AI Risk Scores attached.
+    Unified Defect Ingest endpoint returning aggregated defects across TMS, SMMS, and TDMS.
+
+    AI Risk Scores (Layer 1) are attached to every record.
+    Night-shift / monsoon-adjusted durations are injected as `duration_adjusted_mins`.
+
+    Query params:
+      department:     Filter by 'Engineering' | 'S&T' | 'Traction' | 'All'
+      corridor_id:    Filter to a specific corridor ID
+      min_risk_score: Only return defects with ai_risk_score >= value
+      status:         Filter by 'Pending' | 'In Progress' | 'Completed'
+      sort_by:        Column to sort by (default: ai_risk_score)
     """
     db = get_db()
     try:
+        # Sanitise sort_by against whitelist
+        sort_col = sort_by if sort_by in _VALID_SORT_COLS else "ai_risk_score"
+
         query = """
             SELECT u.*, c.code as corridor_code, c.name as corridor_name
             FROM unified_defects u
@@ -28,7 +53,8 @@ def get_unified_defects(department: str = None, corridor_id: int = None, min_ris
             WHERE 1=1
         """
         params = []
-        if department and department != "All":
+
+        if department and department not in ("All", "all"):
             query += " AND u.department=?"
             params.append(department)
         if corridor_id:
@@ -37,14 +63,24 @@ def get_unified_defects(department: str = None, corridor_id: int = None, min_ris
         if min_risk_score is not None:
             query += " AND u.ai_risk_score >= ?"
             params.append(min_risk_score)
-        query += " ORDER BY u.ai_risk_score DESC"
+        if status and status not in ("All", "all"):
+            query += " AND u.status=?"
+            params.append(status)
+
+        query += f" ORDER BY u.{sort_col} DESC"
 
         rows = db.execute(query, params).fetchall()
         result = []
         for r in rows:
             d = dict(r)
+            # Re-compute AI risk score if not set (e.g. records created before AI engine upgrade)
             if not d.get("ai_risk_score"):
                 d["ai_risk_score"] = calculate_ai_risk_score(d)
+            # Inject shift/monsoon adjusted duration (default to 2 AM maintenance window)
+            d["duration_adjusted_mins"] = calculate_task_duration_adjusted(
+                d.get("required_duration_mins", 60.0),
+                scheduled_start_hour=2,
+            )
             result.append(d)
         return result
     finally:
@@ -66,7 +102,7 @@ def get_maintenance(status: str = None, department: str = None, corridor_id: int
         if status:
             query += " AND m.status=?"
             params.append(status)
-        if department and department != "All":
+        if department and department not in ("All", "all"):
             query += " AND m.department=?"
             params.append(department)
         if corridor_id:
@@ -111,7 +147,7 @@ def create_maintenance(task: MaintenanceTaskCreate):
             ),
         )
 
-        # Also insert into unified_defects
+        # Also insert into unified_defects for cross-system visibility
         db.execute(
             """INSERT INTO unified_defects
                (task_code,title,description,department,defect_type,gear_or_mast_id,corridor_id,

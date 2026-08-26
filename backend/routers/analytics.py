@@ -1,5 +1,6 @@
 from fastapi import APIRouter
 from database import get_db
+from optimizer import calculate_ai_risk_score
 
 router = APIRouter(prefix="/api/analytics", tags=["analytics"])
 
@@ -90,6 +91,54 @@ def get_analytics():
             },
         }
 
+        # ── AI Optimization Engine Metrics ──────────────────────────────────
+        # Defect distribution by department
+        dept_distribution = db.execute("""
+            SELECT department,
+                   COUNT(*) as total,
+                   ROUND(AVG(ai_risk_score), 1) as avg_risk,
+                   ROUND(AVG(required_duration_mins), 0) as avg_duration_mins,
+                   SUM(CASE WHEN overdue_days > 0 THEN 1 ELSE 0 END) as overdue_count
+            FROM unified_defects
+            GROUP BY department
+        """).fetchall()
+
+        # Risk score distribution (High/Medium/Low)
+        risk_distribution = db.execute("""
+            SELECT
+                SUM(CASE WHEN ai_risk_score >= 70 THEN 1 ELSE 0 END) as high_risk,
+                SUM(CASE WHEN ai_risk_score >= 40 AND ai_risk_score < 70 THEN 1 ELSE 0 END) as medium_risk,
+                SUM(CASE WHEN ai_risk_score < 40 THEN 1 ELSE 0 END) as low_risk,
+                COUNT(*) as total
+            FROM unified_defects
+        """).fetchone()
+
+        # Corridor-level optimization summary
+        corridor_optimization = db.execute("""
+            SELECT c.code as corridor_code, c.name as corridor_name,
+                   COUNT(DISTINCT u.id) as defect_count,
+                   COUNT(DISTINCT ts.id) as train_count,
+                   ROUND(AVG(u.ai_risk_score), 1) as avg_risk_score,
+                   ROUND(AVG(u.required_duration_mins), 0) as avg_maintenance_duration
+            FROM corridors c
+            LEFT JOIN unified_defects u ON u.corridor_id = c.id
+            LEFT JOIN train_schedules ts ON ts.corridor_id = c.id
+            GROUP BY c.id
+        """).fetchall()
+
+        # Mega-block effectiveness
+        mega_block_stats = db.execute("""
+            SELECT
+                COUNT(*) as total_mega_blocks,
+                SUM(CASE WHEN status='Approved' THEN 1 ELSE 0 END) as approved,
+                SUM(CASE WHEN status='Proposed' THEN 1 ELSE 0 END) as proposed,
+                ROUND(AVG(calculated_downtime_saved_mins), 1) as avg_downtime_saved_mins,
+                ROUND(SUM(calculated_downtime_saved_mins), 1) as total_downtime_saved_mins,
+                ROUND(AVG(block_utilization), 1) as avg_utilization,
+                ROUND(AVG(train_conflicts), 1) as avg_train_conflicts
+            FROM block_plans
+        """).fetchone()
+
         return {
             "kpis": dict(kpis) if kpis else {},
             "asset_availability": [dict(r) for r in asset_avail],
@@ -97,6 +146,14 @@ def get_analytics():
             "block_statistics": [dict(r) for r in block_stats],
             "monthly_trend": monthly_trend,
             "comparison": comparison,
+            "ai_optimization": {
+                "department_distribution": [dict(r) for r in dept_distribution],
+                "risk_distribution": dict(risk_distribution) if risk_distribution else {},
+                "corridor_optimization": [dict(r) for r in corridor_optimization],
+                "mega_block_effectiveness": dict(mega_block_stats) if mega_block_stats else {},
+                "solver_engine": "Google OR-Tools CP-SAT",
+                "risk_scoring_model": "AI Weighted Multi-Factor",
+            },
         }
     finally:
         db.close()

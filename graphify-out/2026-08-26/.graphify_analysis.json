@@ -106,6 +106,26 @@
       "basemodel"
     ],
     "2": [
+      "backend_database",
+      "backend_database_init_db",
+      "backend_database_seed",
+      "backend_database_seed_extended",
+      "backend_main",
+      "backend_main_health",
+      "backend_main_lifespan",
+      "backend_main_py_get",
+      "backend_main_root",
+      "backend_routers_analytics",
+      "backend_routers_analytics_get_analytics",
+      "backend_routers_analytics_py_get",
+      "backend_routers_plans",
+      "backend_routers_plans_get_mega_blocks",
+      "backend_routers_plans_get_monthly_plan",
+      "backend_routers_plans_get_weekly_plan",
+      "backend_routers_plans_py_get",
+      "backend_routers_plans_rationale_12",
+      "backend_routers_plans_rationale_149",
+      "backend_routers_plans_rationale_84",
       "backend_seed_data",
       "backend_seed_data_compute_risk_score",
       "backend_seed_data_main",
@@ -115,7 +135,8 @@
       "backend_seed_data_rationale_250",
       "backend_seed_data_seed_block_plans",
       "backend_seed_data_seed_defects",
-      "backend_seed_data_seed_trains"
+      "backend_seed_data_seed_trains",
+      "fastapi"
     ],
     "3": [
       "concurrently",
@@ -150,15 +171,12 @@
       "package_version"
     ],
     "4": [
-      "backend_debug2",
-      "backend_debug2_rationale_1",
       "backend_debug_solver",
       "backend_debug_solver_rationale_1",
       "backend_optimizer",
       "backend_optimizer_build_corridor_lookup",
       "backend_optimizer_build_recommendation_response",
       "backend_optimizer_calculate_ai_risk_score",
-      "backend_optimizer_calculate_task_duration_adjusted",
       "backend_optimizer_calculate_task_priority",
       "backend_optimizer_calculate_task_risk_score",
       "backend_optimizer_optimize_blocks",
@@ -167,7 +185,6 @@
       "backend_optimizer_rationale_1",
       "backend_optimizer_rationale_104",
       "backend_optimizer_rationale_112",
-      "backend_optimizer_rationale_125",
       "backend_optimizer_rationale_161",
       "backend_optimizer_rationale_171",
       "backend_optimizer_rationale_194",
@@ -182,24 +199,10 @@
       "backend_optimizer_solve_reschedule",
       "backend_optimizer_string_pad",
       "backend_test_backend_engine",
-      "backend_test_backend_engine_test_backend",
-      "date"
+      "backend_test_backend_engine_test_backend"
     ],
     "5": [
-      "backend_database",
       "backend_database_get_db",
-      "backend_database_init_db",
-      "backend_database_seed",
-      "backend_database_seed_extended",
-      "backend_main",
-      "backend_main_health",
-      "backend_main_lifespan",
-      "backend_main_py_get",
-      "backend_main_root",
-      "backend_models_maintenancetaskcreate",
-      "backend_routers_analytics",
-      "backend_routers_analytics_get_analytics",
-      "backend_routers_analytics_py_get",
       "backend_routers_assets",
       "backend_routers_assets_get_assets",
       "backend_routers_assets_get_corridors",
@@ -225,24 +228,7 @@
       "backend_routers_blocks_rationale_211",
       "backend_routers_blocks_rationale_75",
       "backend_routers_blocks_reschedule",
-      "backend_routers_blocks_save_block",
-      "backend_routers_maintenance",
-      "backend_routers_maintenance_compute_priority",
-      "backend_routers_maintenance_create_maintenance",
-      "backend_routers_maintenance_get_maintenance",
-      "backend_routers_maintenance_get_unified_defects",
-      "backend_routers_maintenance_py_get",
-      "backend_routers_maintenance_py_post",
-      "backend_routers_maintenance_rationale_31",
-      "backend_routers_plans",
-      "backend_routers_plans_get_mega_blocks",
-      "backend_routers_plans_get_monthly_plan",
-      "backend_routers_plans_get_weekly_plan",
-      "backend_routers_plans_py_get",
-      "backend_routers_plans_rationale_12",
-      "backend_routers_plans_rationale_149",
-      "backend_routers_plans_rationale_84",
-      "fastapi"
+      "backend_routers_blocks_save_block"
     ],
     "6": [
       "axios",
@@ -288,6 +274,22 @@
       "vite",
       "vitejs_plugin_react"
     ],
+    "8": [
+      "backend_debug2",
+      "backend_debug2_rationale_1",
+      "backend_models_maintenancetaskcreate",
+      "backend_optimizer_calculate_task_duration_adjusted",
+      "backend_optimizer_rationale_125",
+      "backend_routers_maintenance",
+      "backend_routers_maintenance_compute_priority",
+      "backend_routers_maintenance_create_maintenance",
+      "backend_routers_maintenance_get_maintenance",
+      "backend_routers_maintenance_get_unified_defects",
+      "backend_routers_maintenance_py_get",
+      "backend_routers_maintenance_py_post",
+      "backend_routers_maintenance_rationale_31",
+      "date"
+    ],
     "9": [
       "frontend_src_api_client_login",
       "frontend_src_api_client_signup",
@@ -323,12 +325,13 @@
   "cohesion": {
     "0": 0.061381074168797956,
     "1": 0.1350806451612903,
-    "2": 0.28888888888888886,
+    "2": 0.1032258064516129,
     "3": 0.06666666666666667,
-    "4": 0.11229946524064172,
-    "5": 0.07017543859649122,
+    "4": 0.13793103448275862,
+    "5": 0.13675213675213677,
     "6": 0.08,
     "7": 0.13333333333333333,
+    "8": 0.18681318681318682,
     "9": 0.2727272727272727,
     "10": 0.3333333333333333,
     "11": 1.0,
@@ -357,13 +360,13 @@
       "degree": 11
     },
     {
-      "id": "backend_database_init_db",
-      "label": "init_db()",
+      "id": "ref_react",
+      "label": "react",
       "degree": 11
     },
     {
-      "id": "ref_react",
-      "label": "react",
+      "id": "backend_database_init_db",
+      "label": "init_db()",
       "degree": 11
     },
     {
@@ -377,17 +380,28 @@
       "degree": 10
     },
     {
-      "id": "backend_optimizer_solve_reschedule",
-      "label": "solve_reschedule()",
+      "id": "backend_optimizer_calculate_task_duration_adjusted",
+      "label": "calculate_task_duration_adjusted()",
       "degree": 10
     },
     {
-      "id": "backend_optimizer_calculate_task_duration_adjusted",
-      "label": "calculate_task_duration_adjusted()",
+      "id": "backend_optimizer_solve_reschedule",
+      "label": "solve_reschedule()",
       "degree": 10
     }
   ],
   "surprises": [
+    {
+      "source": "ingest_unified_defect()",
+      "target": "UnifiedDefect",
+      "source_files": [
+        "backend/routers/assets.py",
+        "backend/models.py"
+      ],
+      "confidence": "INFERRED",
+      "relation": "uses",
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
+    },
     {
       "source": "optimize()",
       "target": "OptimizeRequest",
@@ -422,63 +436,19 @@
       "why": "inferred connection - not explicitly stated in source; bridges separate communities"
     },
     {
-      "source": "ingest_unified_defect()",
-      "target": "UnifiedDefect",
-      "source_files": [
-        "backend/routers/assets.py",
-        "backend/models.py"
-      ],
-      "confidence": "INFERRED",
-      "relation": "uses",
-      "why": "inferred connection - not explicitly stated in source; bridges separate communities"
-    },
-    {
       "source": "login()",
-      "target": "AuthResponse",
+      "target": "get_db()",
       "source_files": [
         "backend/routers/auth.py",
-        "backend/models.py"
+        "backend/database.py"
       ],
-      "confidence": "INFERRED",
-      "relation": "uses",
-      "why": "inferred connection - not explicitly stated in source"
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
     }
   ],
-  "questions": [
-    {
-      "type": "bridge_node",
-      "question": "Why does `get_db()` connect `get_db` to `test_upgrade.py`, `seed_data.py`, `optimizer.py`?",
-      "why": "High betweenness centrality (0.073) - this node is a cross-community bridge."
-    },
-    {
-      "type": "bridge_node",
-      "question": "Why does `react` connect `client.js` to `LoginPage.jsx`?",
-      "why": "High betweenness centrality (0.018) - this node is a cross-community bridge."
-    },
-    {
-      "type": "bridge_node",
-      "question": "Why does `solve_block_schedule()` connect `optimizer.py` to `test_upgrade.py`, `get_db`?",
-      "why": "High betweenness centrality (0.015) - this node is a cross-community bridge."
-    },
-    {
-      "type": "isolated_nodes",
-      "question": "What connects `oxc`, `ThemeContext`, `DEPT_COLORS` to the rest of the system?",
-      "why": "64 weakly-connected nodes found - possible documentation gaps or missing edges."
-    },
-    {
-      "type": "low_cohesion",
-      "question": "Should `client.js` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.061381074168797956 - nodes in this community are weakly interconnected."
-    },
-    {
-      "type": "low_cohesion",
-      "question": "Should `test_upgrade.py` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.1350806451612903 - nodes in this community are weakly interconnected."
-    },
-    {
-      "type": "low_cohesion",
-      "question": "Should `package.json` be split into smaller, more focused modules?",
-      "why": "Cohesion score 0.06666666666666667 - nodes in this community are weakly interconnected."
-    }
-  ]
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
 }

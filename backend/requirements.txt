@@ -1,11 +1,27 @@
+# RailOpt Backend — Explicit Dependencies
+# ──────────────────────────────────────────
+
+# Core Web Framework
 fastapi>=0.116.0
 uvicorn[standard]>=0.34.0
+
+# Data Validation
 pydantic>=2.11.0
+
+# Form Data (file uploads, multipart)
 python-multipart>=0.0.20
+
+# Authentication
 passlib[bcrypt]>=1.7.4
 python-jose[cryptography]>=3.3.0
+
+# Database
 aiosqlite>=0.20.0
+sqlalchemy>=2.0.0
+
+# Optimization Engine (Google OR-Tools CP-SAT Solver)
 ortools>=9.10.0
+
+# Machine Learning / AI Risk Scoring
 scikit-learn>=1.4.0
 numpy>=1.26.0
-sqlalchemy>=2.0.0

@@ -35,11 +35,22 @@ def get_blocks(status: str = None, corridor_id: int = None):
 def optimize(req: OptimizeRequest):
     db = get_db()
     try:
-        defects = [dict(r) for r in db.execute("SELECT * FROM unified_defects").fetchall()]
+        defects_query = "SELECT * FROM unified_defects WHERE 1=1"
+        defects_params = []
+        if req.corridor_id:
+            defects_query += " AND corridor_id=?"
+            defects_params.append(req.corridor_id)
+
+        defects = [dict(r) for r in db.execute(defects_query, defects_params).fetchall()]
         if not defects:
             defects = [dict(r) for r in db.execute("SELECT * FROM maintenance_tasks").fetchall()]
 
-        trains = [dict(r) for r in db.execute("SELECT * FROM train_schedules").fetchall()]
+        trains_query = "SELECT * FROM train_schedules WHERE 1=1"
+        trains_params = []
+        if req.corridor_id:
+            trains_query += " AND corridor_id=?"
+            trains_params.append(req.corridor_id)
+        trains = [dict(r) for r in db.execute(trains_query, trains_params).fetchall()]
         if not trains:
             trains = [dict(r) for r in db.execute("SELECT * FROM trains").fetchall()]
 
@@ -52,6 +63,7 @@ def optimize(req: OptimizeRequest):
             horizon="24h",
             max_simultaneous_blocks=req.max_simultaneous_blocks or 3,
             target_date=req.target_date,
+            corridor_id=req.corridor_id,
         )
         return res.get("recommendation", {})
     finally:
@@ -60,14 +72,35 @@ def optimize(req: OptimizeRequest):
 
 @router.post("/optimizer/generate-plan")
 def generate_plan(req: OptimizerPlanRequest):
-    """Triggers Google OR-Tools CP-SAT Solver for a specified horizon and section."""
+    """
+    Triggers Google OR-Tools CP-SAT Solver for a specified horizon and corridor.
+
+    Args:
+        horizon:  '24h' | 'weekly' | 'monthly'
+        corridor_id: Optional corridor filter
+
+    Returns:
+        mega_blocks_created, total_hours_saved, schedule_timeline_json, and full solver result.
+    """
     db = get_db()
     try:
-        defects = [dict(r) for r in db.execute("SELECT * FROM unified_defects").fetchall()]
+        defects_query = "SELECT * FROM unified_defects WHERE status != 'Completed'"
+        defects_params = []
+        if req.corridor_id:
+            defects_query += " AND corridor_id=?"
+            defects_params.append(req.corridor_id)
+        defects_query += " ORDER BY ai_risk_score DESC"
+
+        defects = [dict(r) for r in db.execute(defects_query, defects_params).fetchall()]
         if not defects:
             defects = [dict(r) for r in db.execute("SELECT * FROM maintenance_tasks").fetchall()]
 
-        trains = [dict(r) for r in db.execute("SELECT * FROM train_schedules").fetchall()]
+        trains_query = "SELECT * FROM train_schedules WHERE 1=1"
+        trains_params = []
+        if req.corridor_id:
+            trains_query += " AND corridor_id=?"
+            trains_params.append(req.corridor_id)
+        trains = [dict(r) for r in db.execute(trains_query, trains_params).fetchall()]
         if not trains:
             trains = [dict(r) for r in db.execute("SELECT * FROM trains").fetchall()]
 
@@ -80,6 +113,7 @@ def generate_plan(req: OptimizerPlanRequest):
             horizon=req.horizon,
             max_simultaneous_blocks=req.max_simultaneous_blocks,
             target_date=req.target_date,
+            corridor_id=req.corridor_id,
         )
         return res
     finally:
@@ -88,10 +122,21 @@ def generate_plan(req: OptimizerPlanRequest):
 
 @router.post("/optimizer/reschedule")
 def reschedule(req: RescheduleRequest):
-    """Event-driven rescheduling when a train is delayed."""
+    """
+    Event-driven rescheduling when a train is delayed.
+
+    Accepts: train_id (int), delay_mins (float), optional corridor_id.
+    Returns: Re-optimised schedule with updated maintenance block windows.
+    """
     db = get_db()
     try:
-        defects = [dict(r) for r in db.execute("SELECT * FROM unified_defects").fetchall()]
+        defects_query = "SELECT * FROM unified_defects WHERE status != 'Completed'"
+        defects_params = []
+        if req.corridor_id:
+            defects_query += " AND corridor_id=?"
+            defects_params.append(req.corridor_id)
+
+        defects = [dict(r) for r in db.execute(defects_query, defects_params).fetchall()]
         if not defects:
             defects = [dict(r) for r in db.execute("SELECT * FROM maintenance_tasks").fetchall()]
 
@@ -109,6 +154,42 @@ def reschedule(req: RescheduleRequest):
             corridors=corridors,
         )
         return res
+    finally:
+        db.close()
+
+
+@router.get("/optimizer/status")
+def optimizer_status():
+    """
+    Lightweight status endpoint: returns solver metadata, DB record counts,
+    and last optimization summary from block_plans.
+    """
+    db = get_db()
+    try:
+        from ortools.sat.python import cp_model
+        solver = cp_model.CpSolver()
+
+        defect_count  = db.execute("SELECT COUNT(*) FROM unified_defects").fetchone()[0]
+        train_count   = db.execute("SELECT COUNT(*) FROM train_schedules").fetchone()[0]
+        block_count   = db.execute("SELECT COUNT(*) FROM block_plans").fetchone()[0]
+        approved_count = db.execute("SELECT COUNT(*) FROM block_plans WHERE status='Approved'").fetchone()[0]
+        pending_count = db.execute("SELECT COUNT(*) FROM unified_defects WHERE status='Pending'").fetchone()[0]
+
+        return {
+            "solver_engine":     "Google OR-Tools CP-SAT",
+            "ortools_available": True,
+            "max_solve_seconds": 3.0,
+            "km_proximity_threshold_km": 5.0,
+            "train_buffer_mins": 15,
+            "db_stats": {
+                "total_defects":     defect_count,
+                "pending_defects":   pending_count,
+                "total_trains":      train_count,
+                "total_block_plans": block_count,
+                "approved_blocks":   approved_count,
+            },
+            "timestamp": datetime.datetime.utcnow().isoformat() + "Z",
+        }
     finally:
         db.close()
 

@@ -9,6 +9,26 @@
     "dev:frontend": "npm --prefix frontend run dev -- --host 0.0.0.0",
     "dev:backend": "cd backend && python -m uvicorn main:app --reload --host 127.0.0.1 --port 8000",
     "install:frontend": "npm --prefix frontend install",
-    "install:backend": "cd backend && python -m pip install -r requirements.txt"
+    "install:backend": "cd backend && python -m pip install -r requirements.txt",
+    "frontend": "cd frontend && npm run dev",
+    "backend": "cd backend && uvicorn main:app --reload --host 127.0.0.1 --port 8000",
+    "start": "concurrently \"npm run frontend\" \"npm run backend\""
+  },
+  "description": "**Indian Railways / CRIS Operational Block Optimization Engine**",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gpharish-2006/rail-opt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/gpharish-2006/rail-opt/issues"
+  },
+  "homepage": "https://github.com/gpharish-2006/rail-opt#readme",
+  "devDependencies": {
+    "concurrently": "^10.0.5"
   }
 }
