@@ -97,12 +97,18 @@ export default function BlockPlannerPage() {
         task_ids: selectedTasks.length ? selectedTasks : null,
       })
       const resData = res?.data?.data || res?.data || {}
+      const responseTasks = resData.tasks || resData.departments_tasks || resData.departmentsTasks || resData.scheduled_tasks || selectedWorkOrders
+      const timelineTasks = selectedTasks.length ? selectedWorkOrders : responseTasks
       setResult({
         ...resData,
+        corridor_code: resData.corridor_code || resData.corridorCode || 'IR-MAIN',
+        corridor_name: resData.corridor_name || resData.corridorName || 'Indian Railways Mainline',
         priority_score: resData.priority_score ?? resData.priorityScore ?? calculatedPriorityScore,
         block_utilization: resData.block_utilization ?? resData.blockUtilization ?? calculatedUtilization,
+        estimated_delay_min: resData.estimated_delay_min ?? resData.train_delay_mins ?? resData.trainDelayMins ?? 0,
         activities_combined: selectedWorkOrders.length,
-        tasks: resData.tasks || resData.departments_tasks || selectedWorkOrders,
+        departments_tasks: timelineTasks,
+        tasks: timelineTasks,
       })
     } catch (err) {
       // Fallback AI optimization result mock
@@ -123,6 +129,7 @@ export default function BlockPlannerPage() {
         estimated_delay_min: 0,
         duration_hours: 4.0,
         block_utilization: calculatedUtilization,
+        departments_tasks: selectedWorkOrders,
         tasks: selectedWorkOrders,
         explanation: [
           'Engineered shadow block combining Engineering, S&T, and Traction into 1 single possession window.',
@@ -189,6 +196,12 @@ export default function BlockPlannerPage() {
     }))
     setOverrideModalOpen(false)
   }
+
+  const timelineTasks = result?.departments_tasks?.length > 0
+    ? result.departments_tasks
+    : result?.tasks?.length > 0
+      ? result.tasks
+      : tasks.filter(item => selectedTasks.includes(item.id))
 
   return (
     <div className="space-y-5">
@@ -413,61 +426,43 @@ export default function BlockPlannerPage() {
                     </div>
                   </div>
 
-                  {/* Individual Department Rows (Y-Axis: KM Markers) */}
+                  {/* Dynamic Timeline Rows */}
                   <div className="space-y-3 pt-3 text-xs">
-                    {/* Engineering Row */}
-                    <div className="flex items-center">
-                      <div className="w-28 flex-shrink-0 font-bold text-red-400 text-[11px] truncate">
-                        ENG (KM 120-135)
-                      </div>
-                      <div className="flex-1 relative h-7 bg-slate-800/80 rounded border border-slate-700">
-                        <div
-                          className="absolute h-full bg-red-600/80 border border-red-400 rounded flex items-center justify-center text-[10px] font-bold text-white shadow-xs"
-                          style={{
-                            left: `${((result.start_hour ?? 1) / 24) * 100}%`,
-                            width: `${(Math.max(2, result.duration_hours - 0.5) / 24) * 100}%`,
-                          }}
-                        >
-                          Track Tamping
+                    {timelineTasks.map((task, index) => {
+                      const department = task.dept_code || task.department || (
+                        task.type === 'Engineering' ? 'ENG' : task.type === 'Signalling' ? 'S&T' : 'TRD'
+                      )
+                      const title = task.task_name || task.title || 'Maintenance Task'
+                      const km = task.km_range || task.kmRange || `KM ${task.km_start || 140}-${task.km_end || 145}`
+                      const startHour = task.start_hour ?? result.start_hour ?? 1
+                      const duration = task.duration_hours ?? (parseFloat(task.duration) || 2)
+                      const color = department.includes('ENG')
+                        ? '#ef4444'
+                        : department.includes('S&T')
+                          ? '#f59e0b'
+                          : '#3b82f6'
+                      return (
+                        <div className="flex items-center" key={task.id ?? task.task_code ?? index}>
+                          <div className="w-36 flex-shrink-0 font-bold text-[11px] truncate" style={{ color }}>
+                            {department} ({km})
+                          </div>
+                          <div className="flex-1 relative h-7 bg-slate-800/80 rounded border border-slate-700">
+                            <div
+                              className="absolute h-full rounded flex items-center justify-center px-2 text-[10px] font-bold text-white shadow-xs truncate"
+                              style={{
+                                left: `${(startHour / 24) * 100}%`,
+                                width: `${(duration / 24) * 100}%`,
+                                backgroundColor: `${color}cc`,
+                                border: `1px solid ${color}`,
+                              }}
+                              title={title}
+                            >
+                              {title}
+                            </div>
+                          </div>
                         </div>
-                      </div>
-                    </div>
-
-                    {/* S&T Row */}
-                    <div className="flex items-center">
-                      <div className="w-28 flex-shrink-0 font-bold text-amber-400 text-[11px] truncate">
-                        S&T (KM 122-128)
-                      </div>
-                      <div className="flex-1 relative h-7 bg-slate-800/80 rounded border border-slate-700">
-                        <div
-                          className="absolute h-full bg-amber-600/80 border border-amber-400 rounded flex items-center justify-center text-[10px] font-bold text-white shadow-xs"
-                          style={{
-                            left: `${(((result.start_hour ?? 1) + 0.5) / 24) * 100}%`,
-                            width: `${(2 / 24) * 100}%`,
-                          }}
-                        >
-                          Axle Counter
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Traction Row */}
-                    <div className="flex items-center">
-                      <div className="w-28 flex-shrink-0 font-bold text-blue-400 text-[11px] truncate">
-                        TRD (KM 125-140)
-                      </div>
-                      <div className="flex-1 relative h-7 bg-slate-800/80 rounded border border-slate-700">
-                        <div
-                          className="absolute h-full bg-blue-600/80 border border-blue-400 rounded flex items-center justify-center text-[10px] font-bold text-white shadow-xs"
-                          style={{
-                            left: `${((result.start_hour ?? 1) / 24) * 100}%`,
-                            width: `${((result.duration_hours ?? 4) / 24) * 100}%`,
-                          }}
-                        >
-                          OHE Catenary
-                        </div>
-                      </div>
-                    </div>
+                      )
+                    })}
 
                     {/* CONSOLIDATED SHADOW BLOCK ROW (HIGHLIGHTED EMERALD) */}
                     <div className="flex items-center pt-2 border-t border-slate-700">
@@ -484,7 +479,7 @@ export default function BlockPlannerPage() {
                         >
                           <span>CONSOLIDATED MEGA-BLOCK ({result.time_slot_label})</span>
                           <span className="bg-emerald-800 text-emerald-100 text-[9px] px-1.5 py-0.5 rounded border border-emerald-400">
-                            3 TASKS MERGED
+                            {timelineTasks.length} TASKS MERGED
                           </span>
                         </div>
                       </div>
