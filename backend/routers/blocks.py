@@ -51,6 +51,10 @@ def optimize(req: OptimizeRequest) -> dict:
         defects = [dict(r) for r in db.execute(defects_query, defects_params).fetchall()]
         if not defects:
             defects = [dict(r) for r in db.execute("SELECT * FROM maintenance_tasks").fetchall()]
+        if req.task_ids:
+            selected_defects = [defect for defect in defects if defect.get("id") in req.task_ids]
+            if selected_defects:
+                defects = selected_defects
 
         trains_query = "SELECT * FROM train_schedules WHERE 1=1"
         trains_params = []

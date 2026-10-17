@@ -23,6 +23,70 @@ MIN_TRAIN_BUFFER_SLOTS = 1     # ≥ 15 minutes buffer gap around high-priority 
 KM_PROXIMITY_THRESHOLD = 5.0  # Defects within 5 km can be merged into a Mega-Block
 MAX_HORIZON_SLOTS = 2880       # 30 days × 96 slots — CP-SAT int32-safe ceiling
 
+
+def consolidate_schedule_blocks(schedule: List[Dict[str, Any]], target_date: Optional[str] = None) -> List[Dict[str, Any]]:
+    """Collapse overlapping tasks on the same corridor into calendar blocks."""
+    groups: List[List[Dict[str, Any]]] = []
+    for task in sorted(schedule, key=lambda item: (item.get("corridor_id", 1), item.get("start_slot", 0))):
+        matching = []
+        for index, group in enumerate(groups):
+            first = group[0]
+            same_corridor = task.get("corridor_id", 1) == first.get("corridor_id", 1)
+            overlaps = any(
+                task.get("start_slot", 0) < item.get("end_slot", 0)
+                and task.get("end_slot", 0) > item.get("start_slot", 0)
+                for item in group
+            )
+            if same_corridor and overlaps:
+                matching.append(index)
+
+        if not matching:
+            groups.append([task])
+            continue
+
+        merged = groups[matching[0]]
+        merged.append(task)
+        for index in reversed(matching[1:]):
+            merged.extend(groups.pop(index))
+
+    base_date = date.fromisoformat(target_date) if target_date else date.today()
+    blocks = []
+    for index, tasks in enumerate(groups, start=1):
+        start_slot = min(task.get("start_slot", 0) for task in tasks)
+        end_slot = max(task.get("end_slot", 0) for task in tasks)
+        task_count = len(tasks)
+        departments = sorted({task.get("department") or "Engineering" for task in tasks})
+        start_day = start_slot // TOTAL_SLOTS_24H
+        block_start = start_slot % TOTAL_SLOTS_24H
+        block_end = end_slot % TOTAL_SLOTS_24H
+        if end_slot // TOTAL_SLOTS_24H != start_day:
+            block_end = TOTAL_SLOTS_24H
+        priority_score = normalized_priority_score(tasks)
+        blocks.append({
+            "id": f"MB-{base_date.isoformat()}-{index}",
+            "title": "Consolidated Mega-Block" if task_count > 1 else (tasks[0].get("title") or "Maintenance Block"),
+            "is_mega_block": task_count > 1,
+            "task_count": task_count,
+            "merged_departments": departments,
+            "departments": departments,
+            "status": "APPROVED",
+            "corridor_id": tasks[0].get("corridor_id", 1),
+            "corridor_name": tasks[0].get("corridor_name", "Indian Railways Mainline"),
+            "date": (base_date + timedelta(days=start_day)).isoformat(),
+            "day_index": start_day,
+            "start_slot": start_slot,
+            "end_slot": end_slot,
+            "start_time": _slot_to_time(block_start),
+            "end_time": _slot_to_time(block_end),
+            "time_window": f"{_slot_to_time(block_start)} - {_slot_to_time(block_end)}",
+            "km_start": min((task.get("km_start") for task in tasks if task.get("km_start") is not None), default=None),
+            "km_end": max((task.get("km_end") for task in tasks if task.get("km_end") is not None), default=None),
+            "priority_score": priority_score,
+            "assigned_tasks": tasks,
+            "tasks": tasks,
+        })
+    return blocks
+
 # ── Section Traffic Density weights by corridor (higher = busier mainline) ───
 CORRIDOR_TRAFFIC_DENSITY: Dict[int, float] = {
     1: 8.5,   # Mumbai–Pune  – Very High (suburban + intercity)
@@ -44,6 +108,23 @@ DEPARTMENT_RISK_FACTOR: Dict[str, float] = {
     "S&T":         2.5,   # SMMS — signalling reliability critical
     "Traction":    2.0,   # TDMS — electrical/OHE maintenance
 }
+
+
+def normalized_priority_score(tasks: List[Dict[str, Any]]) -> float:
+    """Normalize selected task criticality values from a 1-10 scale to 0-100."""
+    if not tasks:
+        return 0.0
+    total_criticality = sum(float(task.get("criticality", task.get("crit", 7))) for task in tasks)
+    return round((total_criticality / (len(tasks) * 10.0)) * 100.0, 1)
+
+
+def block_utilization(tasks: List[Dict[str, Any]], window_hours: float = 4.0) -> int:
+    """Calculate block utilization from task duration against the available window."""
+    total_duration = sum(
+        float(task.get("duration_hours", task.get("duration", 1.5)))
+        for task in tasks
+    )
+    return min(100, round((total_duration / max(window_hours, 0.1)) * 100))
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -232,6 +313,13 @@ def solve_block_schedule(
             "downtime_reduction_pct": 0.0,
             "schedule_json": [],
             "schedule_timeline_json": [],
+            "schedule": [],
+            "summary": {
+                "total_line_blocks": 0,
+                "approved_mega_blocks": 0,
+                "avg_priority_score": 0.0,
+                "train_conflicts": 0,
+            },
             "recommendation": {},
         }
 
@@ -445,6 +533,17 @@ def solve_block_schedule(
     recommendation = _build_recommendation_response(
         defects, schedule_json, mega_blocks_created, total_hours_saved, corridors
     )
+    formatted_schedule = consolidate_schedule_blocks(schedule_json, target_date)
+    summary = {
+        "total_line_blocks": len(formatted_schedule),
+        "approved_mega_blocks": sum(1 for block in formatted_schedule if block["task_count"] > 1),
+        "avg_priority_score": round(
+            sum(block.get("priority_score", 75.0) for block in formatted_schedule)
+            / max(1, len(formatted_schedule)),
+            1,
+        ),
+        "train_conflicts": 0,
+    }
 
     return {
         "success":               status in (cp_model.OPTIMAL, cp_model.FEASIBLE),
@@ -454,6 +553,8 @@ def solve_block_schedule(
         "downtime_reduction_pct": round(min(45.0, max(0.0, mega_blocks_created * 15.2)), 1),
         "schedule_json":         schedule_json,
         "schedule_timeline_json": schedule_json,   # alias for frontend Gantt chart
+        "schedule":              formatted_schedule,
+        "summary":               summary,
         "recommendation":        recommendation,
     }
 
@@ -557,7 +658,8 @@ def _build_recommendation_response(
         today_str               = str(date.today())
         start_full, end_full    = f"{today_str} 01:00", f"{today_str} 05:00"
 
-    avg_risk = round(sum(calculate_ai_risk_score(d) for d in defects) / len(defects), 1) if defects else 0.0
+    priority_score = normalized_priority_score(defects)
+    utilization = block_utilization(defects, window_hours=4.0)
 
     return {
         "corridor_code":       corr_code,
@@ -567,10 +669,10 @@ def _build_recommendation_response(
         "duration_hours":      dur_hrs,
         "departments":         depts,
         "tasks":               defects[:5],
-        "priority_score":      avg_risk,
+        "priority_score":      priority_score,
         "train_conflicts":     0,
         "estimated_delay_min": 0.0,
-        "block_utilization":   round(min(99.0, 85.0 + mega_blocks_created * 3.5), 1),
+        "block_utilization":   utilization,
         "is_mega_block":       mega_blocks_created > 0,
         "downtime_saved_mins": round(total_hours_saved * 60.0, 1),
         "activities_combined": len(defects),

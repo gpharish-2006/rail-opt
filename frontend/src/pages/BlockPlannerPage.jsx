@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { getMaintenance, getCorridors, optimizeBlock, saveBlock } from '../api/client'
 import StatusBadge from '../components/StatusBadge'
 import { useTheme } from '../context/ThemeContext'
-import { DEPT_BADGE_STYLE, DEPT_COLORS } from '../constants/colors'
+import { DEPT_BADGE_STYLE } from '../constants/colors'
 import {
   Brain,
   Loader2,
@@ -20,7 +20,16 @@ import {
   Plus,
 } from 'lucide-react'
 
-const DEPT_BAR_COLOR = DEPT_COLORS
+function getDeptColors(task) {
+  const department = String(task.dept_code || task.department || task.dept || task.type || '').toUpperCase()
+  if (department.includes('ENG') || department.includes('TRACK')) {
+    return { text: 'text-red-400', bg: 'bg-red-600/80 border-red-400' }
+  }
+  if (department.includes('S&T') || department.includes('SIGNAL')) {
+    return { text: 'text-amber-400', bg: 'bg-amber-600/80 border-amber-400' }
+  }
+  return { text: 'text-blue-400', bg: 'bg-blue-600/80 border-blue-400' }
+}
 
 export default function BlockPlannerPage() {
   const { theme } = useTheme()
@@ -99,12 +108,18 @@ export default function BlockPlannerPage() {
       const resData = res?.data?.data || res?.data || {}
       const responseTasks = resData.tasks || resData.departments_tasks || resData.departmentsTasks || resData.scheduled_tasks || selectedWorkOrders
       const timelineTasks = selectedTasks.length ? selectedWorkOrders : responseTasks
+      const backendPriorityScore = Number(resData.priority_score ?? resData.priorityScore)
+      const backendUtilization = Number(resData.block_utilization ?? resData.blockUtilization)
       setResult({
         ...resData,
         corridor_code: resData.corridor_code || resData.corridorCode || 'IR-MAIN',
         corridor_name: resData.corridor_name || resData.corridorName || 'Indian Railways Mainline',
-        priority_score: resData.priority_score ?? resData.priorityScore ?? calculatedPriorityScore,
-        block_utilization: resData.block_utilization ?? resData.blockUtilization ?? calculatedUtilization,
+        priority_score: selectedWorkOrders.length > 0 || !Number.isFinite(backendPriorityScore) || backendPriorityScore < 70
+          ? calculatedPriorityScore
+          : backendPriorityScore,
+        block_utilization: selectedWorkOrders.length > 0 || !Number.isFinite(backendUtilization)
+          ? calculatedUtilization
+          : backendUtilization,
         estimated_delay_min: resData.estimated_delay_min ?? resData.train_delay_mins ?? resData.trainDelayMins ?? 0,
         activities_combined: selectedWorkOrders.length,
         departments_tasks: timelineTasks,
@@ -429,31 +444,25 @@ export default function BlockPlannerPage() {
                   {/* Dynamic Timeline Rows */}
                   <div className="space-y-3 pt-3 text-xs">
                     {timelineTasks.map((task, index) => {
-                      const department = task.dept_code || task.department || (
+                      const { text: textColor, bg: bgStyle } = getDeptColors(task)
+                      const department = task.dept_code || task.department || task.dept || (
                         task.type === 'Engineering' ? 'ENG' : task.type === 'Signalling' ? 'S&T' : 'TRD'
                       )
                       const title = task.task_name || task.title || 'Maintenance Task'
                       const km = task.km_range || task.kmRange || `KM ${task.km_start || 140}-${task.km_end || 145}`
                       const startHour = task.start_hour ?? result.start_hour ?? 1
                       const duration = task.duration_hours ?? (parseFloat(task.duration) || 2)
-                      const color = department.includes('ENG')
-                        ? '#ef4444'
-                        : department.includes('S&T')
-                          ? '#f59e0b'
-                          : '#3b82f6'
                       return (
                         <div className="flex items-center" key={task.id ?? task.task_code ?? index}>
-                          <div className="w-36 flex-shrink-0 font-bold text-[11px] truncate" style={{ color }}>
+                          <div className={`w-44 flex-shrink-0 font-bold text-[11px] truncate ${textColor}`}>
                             {department} ({km})
                           </div>
                           <div className="flex-1 relative h-7 bg-slate-800/80 rounded border border-slate-700">
                             <div
-                              className="absolute h-full rounded flex items-center justify-center px-2 text-[10px] font-bold text-white shadow-xs truncate"
+                              className={`absolute h-full rounded border flex items-center justify-center px-2 text-[10px] font-bold text-white shadow-xs truncate ${bgStyle}`}
                               style={{
                                 left: `${(startHour / 24) * 100}%`,
                                 width: `${(duration / 24) * 100}%`,
-                                backgroundColor: `${color}cc`,
-                                border: `1px solid ${color}`,
                               }}
                               title={title}
                             >

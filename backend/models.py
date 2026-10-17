@@ -214,4 +214,6 @@ class OptimizerPlanResponse(BaseModel):
     downtime_reduction_pct: float
     schedule_json: List[Dict[str, Any]]
     schedule_timeline_json: List[Dict[str, Any]] = []
+    schedule: List[Dict[str, Any]] = Field(default_factory=list)
+    summary: Dict[str, Any] = Field(default_factory=dict)
     recommendations: List[BlockRecommendation] = []
